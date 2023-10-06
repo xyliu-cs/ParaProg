@@ -1,0 +1,193 @@
+Current directory: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts
+Sequential PartB (Optimized with -O2)
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Output file to: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-Smooth.jpg
+Transformation Complete!
+Execution Time: 10749 milliseconds
+
+SIMD(AVX2) PartB (Optimized with -O2)
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Output file to: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-Smooth.jpg
+Transformation Complete!
+Execution Time: 855 milliseconds
+
+MPI PartB (Optimized with -O2)
+Number of processes: 1
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Output file to: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-Smooth.jpg
+Transformation Complete!
+Execution Time: 12802 milliseconds
+
+Number of processes: 2
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Output file to: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-Smooth.jpg
+Transformation Complete!
+Execution Time: 9859 milliseconds
+
+Number of processes: 4
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Output file to: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-Smooth.jpg
+Transformation Complete!
+Execution Time: 5414 milliseconds
+
+Number of processes: 8
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Output file to: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-Smooth.jpg
+Transformation Complete!
+Execution Time: 3175 milliseconds
+
+Number of processes: 16
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Output file to: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-Smooth.jpg
+Transformation Complete!
+Execution Time: 2064 milliseconds
+
+Number of processes: 32
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Output file to: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-Smooth.jpg
+Transformation Complete!
+Execution Time: 1879 milliseconds
+
+Pthread PartB (Optimized with -O2)
+Number of cores: 1
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Output file to: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-Smooth.jpg
+Transformation Complete!
+Execution Time: 11033 milliseconds
+
+Number of cores: 2
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Output file to: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-Smooth.jpg
+Transformation Complete!
+Execution Time: 10201 milliseconds
+
+Number of cores: 4
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Output file to: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-Smooth.jpg
+Transformation Complete!
+Execution Time: 5121 milliseconds
+
+Number of cores: 8
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Output file to: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-Smooth.jpg
+Transformation Complete!
+Execution Time: 2574 milliseconds
+
+Number of cores: 16
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Output file to: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-Smooth.jpg
+Transformation Complete!
+Execution Time: 1302 milliseconds
+
+Number of cores: 32
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Output file to: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-Smooth.jpg
+Transformation Complete!
+Execution Time: 731 milliseconds
+
+OpenMP PartB (Optimized with -O2)
+Number of cores: 1
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Output file to: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-Smooth.jpg
+Transformation Complete!
+Execution Time: 6004 milliseconds
+
+Number of cores: 2
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Output file to: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-Smooth.jpg
+Transformation Complete!
+Execution Time: 6005 milliseconds
+
+Number of cores: 4
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Output file to: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-Smooth.jpg
+Transformation Complete!
+Execution Time: 3097 milliseconds
+
+Number of cores: 8
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Output file to: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-Smooth.jpg
+Transformation Complete!
+Execution Time: 1546 milliseconds
+
+Number of cores: 16
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Output file to: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-Smooth.jpg
+Transformation Complete!
+Execution Time: 897 milliseconds
+
+Number of cores: 32
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Output file to: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-Smooth.jpg
+Transformation Complete!
+Execution Time: 451 milliseconds
+
+CUDA PartB
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Output file to: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-Smooth.jpg
+Transformation Complete!
+GPU Execution Time: 32.488 milliseconds
+
+OpenACC PartB
+Input file from: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Output file to: /nfsmnt/120040051/CSC4005-2023Fall/project1/src/scripts/../../images/20K-Smooth.jpg
+Transformation Complete!
+Execution Time: 376 milliseconds
+

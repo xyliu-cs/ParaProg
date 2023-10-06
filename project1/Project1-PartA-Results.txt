@@ -1,0 +1,193 @@
+Current directory: /var/spool/slurmd/job88772
+Sequential PartA (Optimized with -O2)
+Input file from: ./images/20K-RGB.jpg
+Output file to: ./images/20K-Gray.jpg
+Transformation Complete!
+Execution Time: 636 milliseconds
+
+SIMD(AVX2) PartA (Optimized with -O2)
+Input file from: ./images/20K-RGB.jpg
+Output file to: ./images/20K-Gray.jpg
+Transformation Complete!
+Execution Time: 402 milliseconds
+
+MPI PartA (Optimized with -O2)
+Number of processes: 1
+Input file from: ./images/20K-RGB.jpg
+Output file to: ./images/20K-Gray.jpg
+Transformation Complete!
+Execution Time: 638 milliseconds
+
+Number of processes: 2
+Input file from: ./images/20K-RGB.jpg
+Input file from: ./images/20K-RGB.jpg
+Output file to: ./images/20K-Gray.jpg
+Transformation Complete!
+Execution Time: 770 milliseconds
+
+Number of processes: 4
+Input file from: ./images/20K-RGB.jpg
+Input file from: ./images/20K-RGB.jpg
+Input file from: ./images/20K-RGB.jpg
+Input file from: ./images/20K-RGB.jpg
+Output file to: ./images/20K-Gray.jpg
+Transformation Complete!
+Execution Time: 486 milliseconds
+
+Number of processes: 8
+Input file from: ./images/20K-RGB.jpg
+Input file from: ./images/20K-RGB.jpg
+Input file from: ./images/20K-RGB.jpg
+Input file from: ./images/20K-RGB.jpg
+Input file from: ./images/20K-RGB.jpg
+Input file from: ./images/20K-RGB.jpg
+Input file from: ./images/20K-RGB.jpg
+Input file from: ./images/20K-RGB.jpg
+Output file to: ./images/20K-Gray.jpg
+Transformation Complete!
+Execution Time: 422 milliseconds
+
+Number of processes: 16
+Input file from: ./images/20K-RGB.jpg
+Input file from: ./images/20K-RGB.jpg
+Input file from: ./images/20K-RGB.jpg
+Input file from: ./images/20K-RGB.jpg
+Input file from: ./images/20K-RGB.jpg
+Input file from: ./images/20K-RGB.jpg
+Input file from: ./images/20K-RGB.jpg
+Input file from: ./images/20K-RGB.jpg
+Input file from: ./images/20K-RGB.jpg
+Input file from: ./images/20K-RGB.jpg
+Input file from: ./images/20K-RGB.jpg
+Input file from: ./images/20K-RGB.jpg
+Input file from: ./images/20K-RGB.jpg
+Input file from: ./images/20K-RGB.jpg
+Input file from: ./images/20K-RGB.jpg
+Input file from: ./images/20K-RGB.jpg
+Output file to: ./images/20K-Gray.jpg
+Transformation Complete!
+Execution Time: 305 milliseconds
+
+Number of processes: 32
+Input file from: ./images/20K-RGB.jpg
+Input file from: ./images/20K-RGB.jpg
+Input file from: ./images/20K-RGB.jpg
+Input file from: ./images/20K-RGB.jpg
+Input file from: ./images/20K-RGB.jpg
+Input file from: ./images/20K-RGB.jpg
+Input file from: ./images/20K-RGB.jpg
+Input file from: ./images/20K-RGB.jpg
+Input file from: ./images/20K-RGB.jpg
+Input file from: ./images/20K-RGB.jpg
+Input file from: ./images/20K-RGB.jpg
+Input file from: ./images/20K-RGB.jpg
+Input file from: ./images/20K-RGB.jpg
+Input file from: ./images/20K-RGB.jpg
+Input file from: ./images/20K-RGB.jpg
+Input file from: ./images/20K-RGB.jpg
+Input file from: ./images/20K-RGB.jpg
+Input file from: ./images/20K-RGB.jpg
+Input file from: ./images/20K-RGB.jpg
+Input file from: ./images/20K-RGB.jpg
+Input file from: ./images/20K-RGB.jpg
+Input file from: ./images/20K-RGB.jpg
+Input file from: ./images/20K-RGB.jpg
+Input file from: ./images/20K-RGB.jpg
+Input file from: ./images/20K-RGB.jpg
+Input file from: ./images/20K-RGB.jpg
+Input file from: ./images/20K-RGB.jpg
+Input file from: ./images/20K-RGB.jpg
+Input file from: ./images/20K-RGB.jpg
+Input file from: ./images/20K-RGB.jpg
+Input file from: ./images/20K-RGB.jpg
+Input file from: ./images/20K-RGB.jpg
+Output file to: ./images/20K-Gray.jpg
+Transformation Complete!
+Execution Time: 270 milliseconds
+
+Pthread PartA (Optimized with -O2)
+Number of cores: 1
+Input file from: ./images/20K-RGB.jpg
+Output file to: ./images/20K-Gray.jpg
+Transformation Complete!
+Execution Time: 742 milliseconds
+
+Number of cores: 2
+Input file from: ./images/20K-RGB.jpg
+Output file to: ./images/20K-Gray.jpg
+Transformation Complete!
+Execution Time: 643 milliseconds
+
+Number of cores: 4
+Input file from: ./images/20K-RGB.jpg
+Output file to: ./images/20K-Gray.jpg
+Transformation Complete!
+Execution Time: 339 milliseconds
+
+Number of cores: 8
+Input file from: ./images/20K-RGB.jpg
+Output file to: ./images/20K-Gray.jpg
+Transformation Complete!
+Execution Time: 251 milliseconds
+
+Number of cores: 16
+Input file from: ./images/20K-RGB.jpg
+Output file to: ./images/20K-Gray.jpg
+Transformation Complete!
+Execution Time: 118 milliseconds
+
+Number of cores: 32
+Input file from: ./images/20K-RGB.jpg
+Output file to: ./images/20K-Gray.jpg
+Transformation Complete!
+Execution Time: 67 milliseconds
+
+OpenMP PartA (Optimized with -O2)
+Number of cores: 1
+Input file from: ./images/20K-RGB.jpg
+Output file to: ./images/20K-Gray.jpg
+Transformation Complete!
+Execution Time: 586 milliseconds
+
+Number of cores: 2
+Input file from: ./images/20K-RGB.jpg
+Output file to: ./images/20K-Gray.jpg
+Transformation Complete!
+Execution Time: 586 milliseconds
+
+Number of cores: 4
+Input file from: ./images/20K-RGB.jpg
+Output file to: ./images/20K-Gray.jpg
+Transformation Complete!
+Execution Time: 444 milliseconds
+
+Number of cores: 8
+Input file from: ./images/20K-RGB.jpg
+Output file to: ./images/20K-Gray.jpg
+Transformation Complete!
+Execution Time: 271 milliseconds
+
+Number of cores: 16
+Input file from: ./images/20K-RGB.jpg
+Output file to: ./images/20K-Gray.jpg
+Transformation Complete!
+Execution Time: 222 milliseconds
+
+Number of cores: 32
+Input file from: ./images/20K-RGB.jpg
+Output file to: ./images/20K-Gray.jpg
+Transformation Complete!
+Execution Time: 122 milliseconds
+
+CUDA PartA
+Input file from: ./images/20K-RGB.jpg
+Output file to: ./images/20K-Gray.jpg
+Transformation Complete!
+GPU Execution Time: 27.1429 milliseconds
+
+OpenACC PartA
+Input file from: ./images/20K-RGB.jpg
+Output file to: ./images/20K-Gray.jpg
+Transformation Complete!
+Execution Time: 28 milliseconds
+
