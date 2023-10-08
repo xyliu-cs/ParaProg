@@ -1,10 +1,3 @@
-//
-// Created by Zhong Yebin on 2023/9/16.
-// Email: yebinzhong@link.cuhk.edu.cn
-//
-// OpenACC implementation of transforming a JPEG image from RGB to gray
-//
-
 #include <iostream>
 #include <chrono>
 
@@ -45,41 +38,59 @@ int main(int argc, char **argv)
     }
 
     #pragma acc enter data copyin(filteredImage[0 : width * height * dim], \
-                              buffer[0 : width * height * dim], filter)
+                              buffer[0 : width * height * dim])
 
     auto start_time = std::chrono::high_resolution_clock::now();
 
     #pragma acc parallel present(filteredImage[0 : width * height * dim],             \
-                             buffer[0 : width * height * dim], filter) num_gangs(1024)
+                             buffer[0 : width * height * dim]) 
     {
-        #pragma acc loop independent
+        #pragma acc loop device_type(nvidia) independent
         for (int y = 1; y <= height - 2; y++) {
+            #pragma acc loop device_type(nvidia) independent
             for (int x = 1; x <= width -2; x++) {
+                
+                double r_sum, g_sum, b_sum;
 
-                double r_sum = 0.0, g_sum = 0.0, b_sum = 0.0;
+                int r_row1_flat_base = (y - 1) * width + (x - 1);
+                int red_1_1 = r_row1_flat_base * dim;
+                int red_1_2 = (r_row1_flat_base + 1) * dim; 
+                int red_1_3 = (r_row1_flat_base + 2) * dim;
 
-                for (int dy = -1; dy <= 1; dy++) {
-                    int row_1st = ((y+dy) * width + x - 1) * dim;
-                    int row_2nd = ((y+dy) * width + x) * dim ; 
-                    int row_3nd = ((y+dy) * width + x + 1) * dim;
-                    
-                    r_sum += buffer[row_1st] * filter[1+dy][0] + buffer[row_2nd] * filter[1+dy][1] + buffer[row_3nd] * filter[1+dy][2];
-                    g_sum += buffer[row_1st+1] * filter[1+dy][0] + buffer[row_2nd+1] * filter[1+dy][1] + buffer[row_3nd+1] * filter[1+dy][2];
-                    b_sum += buffer[row_1st+2] * filter[1+dy][0] + buffer[row_2nd+2] * filter[1+dy][1] + buffer[row_3nd+2] * filter[1+dy][2];
-                }
+                int r_row2_flat_base = y * width + (x - 1);
+                int red_2_1 = r_row2_flat_base * dim;
+                int red_2_2 = (r_row2_flat_base + 1) * dim; 
+                int red_2_3 = (r_row2_flat_base + 2) * dim;
+
+                int r_row3_flat_base = (y + 1) * width + (x - 1);
+                int red_3_1 = r_row3_flat_base * dim;
+                int red_3_2 = (r_row3_flat_base + 1) * dim; 
+                int red_3_3 = (r_row3_flat_base + 2) * dim;
+
+                // contiguous memory access, maybe? 
+                // filter value (1,1) (1,2) (1,3)   
+                r_sum = buffer[red_1_1] * (1/9) + buffer[red_1_2] * (1/9) + buffer[red_1_3] * (1/9);
+                g_sum = buffer[red_1_1+1] * (1/9) + buffer[red_1_2+1] * (1/9) + buffer[red_1_3+1] * (1/9); 
+                b_sum = buffer[red_1_1+2] * (1/9) + buffer[red_1_2+2] * (1/9) + buffer[red_1_3+2] * (1/9);
+                // filter value (2,1) (2,2) (2,3)   
+                r_sum += buffer[red_2_1] * (1/9) + buffer[red_2_2] * (1/9) + buffer[red_2_3] * (1/9);
+                g_sum += buffer[red_2_1+1] * (1/9) + buffer[red_2_2+1] * (1/9) + buffer[red_2_3+1] * (1/9);
+                b_sum += buffer[red_2_1+2] * (1/9) + buffer[red_2_2+2] * (1/9) + buffer[red_2_3+2] * (1/9);
+                // filter value (3,1) (3,2) (3,3)   
+                r_sum += buffer[red_3_1] * (1/9) + buffer[red_3_2] * (1/9) + buffer[red_3_3] * (1/9);
+                g_sum += buffer[red_3_1+1] * (1/9) + buffer[red_3_2+1] * (1/9) + buffer[red_3_3+1] * (1/9);
+                b_sum += buffer[red_3_1+2] * (1/9) + buffer[red_3_2+2] * (1/9) + buffer[red_3_3+2] * (1/9);
 
                 int base_r = (y * width + x) * dim;
                 
                 filteredImage[base_r] = static_cast<unsigned char>(r_sum);   // R
                 filteredImage[base_r+1] = static_cast<unsigned char>(g_sum); // G
                 filteredImage[base_r+2] = static_cast<unsigned char>(b_sum); // B
-
             }
         }
-    }
+    }                         
 
     auto end_time = std::chrono::high_resolution_clock::now();
-
     #pragma acc exit data copyout(filteredImage[0 : width * height * dim], buffer[0 : width * height * dim])
 
     auto elapsed_time = std::chrono::duration_cast<std::chrono::milliseconds>(

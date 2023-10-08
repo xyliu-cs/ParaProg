@@ -1,10 +1,3 @@
-//
-// Created by Zhang Na on 2023/9/15.
-// Email: nazhang@link.cuhk.edu.cn
-//
-// Pthread implementation of transforming a JPEG image from RGB to gray
-//
-
 #include <iostream>
 #include <chrono>
 #include <pthread.h>

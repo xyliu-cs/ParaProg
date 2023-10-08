@@ -1,14 +1,5 @@
-//
-// Created by Zhong Yebin on 2023/9/16.
-// Email: yebinzhong@link.cuhk.edu.cn
-//
-// CUDA implementation of transforming a JPEG image from RGB to gray
-//
-
 #include <iostream>
-
 #include <cuda_runtime.h> // CUDA Header
-
 #include "utils.hpp"
 
 __constant__ float filter[3][3] = {

@@ -1,10 +1,3 @@
-//
-// Created by Liu Yuxuan on 2023/9/15.
-// Email: yuxuanliu1@link.cuhk.edu.cm
-//
-// A naive sequential implementation of image filtering
-//
-
 #include <iostream>
 #include <cmath>
 #include <chrono>
