@@ -34,35 +34,48 @@ void* rgbFilter(void* arg) {
     ThreadData* data = reinterpret_cast<ThreadData*>(arg);
     unsigned char *input = data->input_buffer;
     unsigned char *output = data->output_buffer;
-    int width = data->width;
+    int w = data->width;
+    int dim = 3;
 
     for (int row_idx = data->start_row; row_idx <= data->end_row; row_idx++) {
-        for (int x = 1; x < width - 1; x++) {
-            float filtered_sum_r = 0;
-            float filtered_sum_g = 0;
-            float filtered_sum_b = 0;
+        for (int x = 1; x < w - 1; x++) {
+            float r_sum;
+            float g_sum;
+            float b_sum;
 
-            for (int dy = -1; dy <= 1; dy++) {
-                for (int dx = -1; dx <= 1; dx++) {
-                    int r_idx = ((row_idx + dy) * width + (x + dx)) * 3;
-                    int g_idx = r_idx + 1;
-                    int b_idx = g_idx + 1;
+            int r_row1_flat_base = (row_idx - 1) * w + (x - 1);
+            int red_1_1 = r_row1_flat_base * dim;
+            int red_1_2 = (r_row1_flat_base + 1) * dim; 
+            int red_1_3 = (r_row1_flat_base + 2) * dim;
 
-                    double current_filter = filter[dy+1][dx+1];
+            int r_row2_flat_base = row_idx * w + (x - 1);
+            int red_2_1 = r_row2_flat_base * dim;
+            int red_2_2 = (r_row2_flat_base + 1) * dim; 
+            int red_2_3 = (r_row2_flat_base + 2) * dim;
 
-                    filtered_sum_r += input[r_idx] * current_filter;
-                    filtered_sum_g += input[g_idx] * current_filter;
-                    filtered_sum_b += input[b_idx] * current_filter;
-                }
-            }
+            int r_row3_flat_base = (row_idx + 1) * w + (x - 1);
+            int red_3_1 = r_row3_flat_base * dim;
+            int red_3_2 = (r_row3_flat_base + 1) * dim; 
+            int red_3_3 = (r_row3_flat_base + 2) * dim;
 
-            int out_idx_r = (row_idx * width + x) * 3;
-            int out_idx_g = out_idx_r + 1;
-            int out_idx_b = out_idx_g + 1;
+            // contiguous memory access, maybe?    
+            r_sum = input[red_1_1] * filter[0][0] + input[red_1_2] * filter[0][1] + input[red_1_3] * filter[0][2];
+            g_sum = input[red_1_1+1] * filter[0][0] + input[red_1_2+1] * filter[0][1] + input[red_1_3+1] * filter[0][2]; 
+            b_sum = input[red_1_1+2] * filter[0][0] + input[red_1_2+2] * filter[0][1] + input[red_1_3+2] * filter[0][2];
 
-            output[out_idx_r] = static_cast<unsigned char>(std::round(filtered_sum_r));
-            output[out_idx_g] = static_cast<unsigned char>(std::round(filtered_sum_g));
-            output[out_idx_b] = static_cast<unsigned char>(std::round(filtered_sum_b));
+            r_sum += input[red_2_1] * filter[1][0] + input[red_2_2] * filter[1][1] + input[red_2_3] * filter[1][2];
+            g_sum += input[red_2_1+1] * filter[1][0] + input[red_2_2+1] * filter[1][1] + input[red_2_3+1] * filter[1][2];
+            b_sum += input[red_2_1+2] * filter[1][0] + input[red_2_2+2] * filter[1][1] + input[red_2_3+2] * filter[1][2];
+
+            r_sum += input[red_3_1] * filter[2][0] + input[red_3_2] * filter[2][1] + input[red_3_3] * filter[2][2];
+            g_sum += input[red_3_1+1] * filter[2][0] + input[red_3_2+1] * filter[2][1] + input[red_3_3+1] * filter[2][2];
+            b_sum += input[red_3_1+2] * filter[2][0] + input[red_3_2+2] * filter[2][1] + input[red_3_3+2] * filter[2][2];
+
+            int out_idx_r = (row_idx * w + x) * 3;;
+
+            output[out_idx_r] = static_cast<unsigned char>(r_sum);
+            output[out_idx_r + 1] = static_cast<unsigned char>(g_sum);
+            output[out_idx_r + 2] = static_cast<unsigned char>(b_sum);
         }
     }
 
@@ -82,25 +95,43 @@ void* rgbFilter_seq(void* arg) {
     {
         for (int width = 1; width < w - 1; width++)
         {
-            int sum_r = 0, sum_g = 0, sum_b = 0;
-            for (int i = -1; i <= 1; i++)
-            {
-                for (int j = -1; j <= 1; j++)
-                {
-                    int channel_value_r = input[((height + i) * w + (width + j)) * 3];
-                    int channel_value_g = input[((height + i) * w + (width + j)) * 3 + 1];
-                    int channel_value_b = input[((height + i) * w + (width + j)) * 3 + 2];
-                    sum_r += channel_value_r * filter[i + 1][j + 1];
-                    sum_g += channel_value_g * filter[i + 1][j + 1];
-                    sum_b += channel_value_b * filter[i + 1][j + 1];
-                }
-            }
-            output[(height * w + width) * 3]
-                = static_cast<unsigned char>(std::round(sum_r));
-            output[(height * w + width) * 3 + 1]
-                = static_cast<unsigned char>(std::round(sum_g));
-            output[(height * w + width) * 3 + 2]
-                = static_cast<unsigned char>(std::round(sum_b));
+            int dim = 3;
+            double r_sum = 0, g_sum = 0, b_sum = 0;
+            
+            int r_row1_flat_base = (height - 1) * w + (width - 1);
+            int red_1_1 = r_row1_flat_base * dim;
+            int red_1_2 = (r_row1_flat_base + 1) * dim; 
+            int red_1_3 = (r_row1_flat_base + 2) * dim;
+
+            int r_row2_flat_base = height * w + (width - 1);
+            int red_2_1 = r_row2_flat_base * dim;
+            int red_2_2 = (r_row2_flat_base + 1) * dim; 
+            int red_2_3 = (r_row2_flat_base + 2) * dim;
+
+            int r_row3_flat_base = (height + 1) * w + (width - 1);
+            int red_3_1 = r_row3_flat_base * dim;
+            int red_3_2 = (r_row3_flat_base + 1) * dim; 
+            int red_3_3 = (r_row3_flat_base + 2) * dim;
+
+            // contiguous memory access, maybe?    
+            r_sum = input[red_1_1] * filter[0][0] + input[red_1_2] * filter[0][1] + input[red_1_3] * filter[0][2];
+            g_sum = input[red_1_1+1] * filter[0][0] + input[red_1_2+1] * filter[0][1] + input[red_1_3+1] * filter[0][2]; 
+            b_sum = input[red_1_1+2] * filter[0][0] + input[red_1_2+2] * filter[0][1] + input[red_1_3+2] * filter[0][2];
+
+            r_sum += input[red_2_1] * filter[1][0] + input[red_2_2] * filter[1][1] + input[red_2_3] * filter[1][2];
+            g_sum += input[red_2_1+1] * filter[1][0] + input[red_2_2+1] * filter[1][1] + input[red_2_3+1] * filter[1][2];
+            b_sum += input[red_2_1+2] * filter[1][0] + input[red_2_2+2] * filter[1][1] + input[red_2_3+2] * filter[1][2];
+
+            r_sum += input[red_3_1] * filter[2][0] + input[red_3_2] * filter[2][1] + input[red_3_3] * filter[2][2];
+            g_sum += input[red_3_1+1] * filter[2][0] + input[red_3_2+1] * filter[2][1] + input[red_3_3+1] * filter[2][2];
+            b_sum += input[red_3_1+2] * filter[2][0] + input[red_3_2+2] * filter[2][1] + input[red_3_3+2] * filter[2][2];
+
+            
+            int base = (height * w + width) * 3;
+
+            output[base] = static_cast<unsigned char>(r_sum);
+            output[base + 1] = static_cast<unsigned char>(g_sum);
+            output[base + 2] = static_cast<unsigned char>(b_sum);
         }
     }    
 }
@@ -157,7 +188,7 @@ int main(int argc, char** argv) {
     auto end_time = std::chrono::high_resolution_clock::now();
     auto elapsed_time = std::chrono::duration_cast<std::chrono::milliseconds>(end_time - start_time);
 
-    // Write GrayImage to output JPEG
+    // Write filtered image to output JPEG
     const char* output_filepath = argv[2];
     std::cout << "Output file to: " << output_filepath << "\n";
     JPEGMeta output_jpeg{filteredImage, input_jpeg.width, input_jpeg.height, 3, input_jpeg.color_space};
