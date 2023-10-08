@@ -1,0 +1,70 @@
+
+#SIMD
+g++ -o simd_PartB simd_PartB.cpp ../utils.cpp -O2 -mavx2 -mfma -I.. -std=c++11 -ljpeg
+//-I is for the header files
+
+./simd_PartB ../../images/Lena-RGB.jpg ../../images/Lena-RGB_filtered_simd.jpg
+./simd_PartB ../../images/20K-RGB.jpg ../../images/20K-RGB_filtered_simd.jpg
+
+
+#pthread
+g++ -O3 pthread_PartB.cpp ../utils.cpp -o pthread_PartB -I.. -std=c++11 -lpthread -ljpeg
+./pthread_PartB ../../images/Lena-RGB.jpg ../../images/Lena-RGB_filtered_pthread.jpg 5
+
+//gdb
+g++ -g -O3 pthread_PartB.cpp ../utils.cpp -o pthread_PartB -I.. -std=c++11 -lpthread -ljpeg
+run ../../images/Lena-RGB.jpg ../../images/Lena-RGB_filtered_pthread.jpg 4
+
+./pthread_PartB ../../images/20K-RGB.jpg ../../images/20K-RGB_filtered_pthread.jpg 1
+./pthread_PartB ../../images/20K-RGB.jpg ../../images/20K-RGB_filtered_pthread.jpg 2
+./pthread_PartB ../../images/20K-RGB.jpg ../../images/20K-RGB_filtered_pthread.jpg 4
+./pthread_PartB ../../images/20K-RGB.jpg ../../images/20K-RGB_filtered_pthread.jpg 8
+./pthread_PartB ../../images/20K-RGB.jpg ../../images/20K-RGB_filtered_pthread.jpg 16
+./pthread_PartB ../../images/20K-RGB.jpg ../../images/20K-RGB_filtered_pthread.jpg 32
+
+./src/cpu/sequential_PartA /path/to/input.jpg /path/to/output.jpg
+g++ -o sequential_PartB sequential_PartB.cpp ../utils.cpp -O2 -mavx2 -I.. -std=c++11 -ljpeg
+./sequential_PartB ../../images/20K-RGB.jpg ../../images/20K-RGB_filtered_sequential.jpg
+
+
+#mpi
+mpic++ -O2 -o mpi_PartB mpi_PartB.cpp ../utils.cpp -I.. -ljpeg -std=c++11
+mpirun -np 8 --allow-run-as-root ./mpi_PartB ../../images/20K-RGB.jpg ../../images/20K-RGB_filtered_mpi.jpg
+mpirun -np 8 ./mpi_PartB ../../images/20K-RGB.jpg ../../images/20K-RGB_filtered_mpi.jpg
+
+#cuda
+nvcc cuda_PartB.cu -o cuda_PartB ../utils.cpp -I.. -ljpeg -std=c++11
+./cuda_PartB ../../images/20K-RGB.jpg ../../images/20K-RGB_filtered_cuda.jpg
+
+salloc -N1 -n4 -pDebug -t10
+hostname
+cuda-memcheck ./cuda_PartB ../../images/20K-RGB.jpg ../../images/20K-RGB_filtered_cuda.jpg
+
+
+#openmp
+g++ -fopenmp openmp_PartB.cpp -o openmp_PartB ../utils.cpp -I.. -ljpeg -std=c++11
+./openmp_PartB ../../images/20K-RGB.jpg ../../images/20K-RGB_filtered_openmp.jpg
+
+
+#OpenACC
+pgc++ -gpu cuda11.4 -acc -mp ./openacc_PartB.cpp -o openacc_PartB ../utils.cpp -I.. -ljpeg -std=c++11
+./openacc_PartB ../../images/20K-RGB.jpg ../../images/20K-RGB_filtered_openacc.jpg
+
+
+salloc -N1 -n4 -pDebug -t30
+srun hostname
+sbatch ./src/scripts/sbatch_PartB.sh
+sbatch ./src/scripts/sbatch_PartB_single.sh
+
+
+
+cd /path/to/project1
+mkdir build && cd build
+# Change to -DCMAKE_BUILD_TYPE=Debug for debug build error message logging
+# Here, use cmake on the cluster and cmake3 in your docker container
+cmake ..
+make -j4
+
+ls -lh /path/to/folder
+
+rm -rf build && mkdir build && cd build && cmake .. && make -j4 && cd .. && sbatch ./src/scripts/sbatch_PartB_single.sh
