@@ -1,10 +1,3 @@
-//
-// Created by Zhang Na on 2023/9/15.
-// Email: nazhang@link.cuhk.edu.cn
-//
-// OpenMP implementation of transforming a JPEG image from RGB to gray
-//
-
 #include <iostream>
 #include <chrono>
 #include <omp.h>    // OpenMP header
@@ -44,7 +37,7 @@ int main(int argc, char** argv) {
         bChannel[i] = input_jpeg.buffer[i * input_jpeg.num_channels + 2];
     }
 
-    // Transforming the R, G, B channels to Gray in parallel
+    // Transforming the R, G, B channels in parallel
     auto filteredImage = new unsigned char[input_jpeg.width * input_jpeg.height * input_jpeg.num_channels]();
     auto start_time = std::chrono::high_resolution_clock::now();
 
@@ -79,7 +72,7 @@ int main(int argc, char** argv) {
     auto end_time = std::chrono::high_resolution_clock::now();
     auto elapsed_time = std::chrono::duration_cast<std::chrono::milliseconds>(end_time - start_time);
 
-    // Save output JPEG GrayScale image
+    // Save output JPEG filtered image
     const char* output_filepath = argv[2];
     std::cout << "Output file to: " << output_filepath << "\n";
     JPEGMeta output_jpeg{filteredImage, input_jpeg.width, input_jpeg.height, input_jpeg.num_channels, input_jpeg.color_space};
