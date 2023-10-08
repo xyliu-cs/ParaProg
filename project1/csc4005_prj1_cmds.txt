@@ -54,7 +54,9 @@ pgc++ -gpu cuda11.4 -acc -mp ./openacc_PartB.cpp -o openacc_PartB ../utils.cpp -
 salloc -N1 -n4 -pDebug -t30
 srun hostname
 sbatch ./src/scripts/sbatch_PartB.sh
+sbatch ./src/scripts/sbatch_PartB_lena.sh
 sbatch ./src/scripts/sbatch_PartB_single.sh
+
 
 
 
@@ -67,4 +69,5 @@ make -j4
 
 ls -lh /path/to/folder
 
+rm -rf build && mkdir build && cd build && cmake .. && make -j4 && cd .. && sbatch ./src/scripts/sbatch_PartB.sh
 rm -rf build && mkdir build && cd build && cmake .. && make -j4 && cd .. && sbatch ./src/scripts/sbatch_PartB_single.sh

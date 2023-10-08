@@ -43,11 +43,11 @@ int main(int argc, char **argv)
     auto start_time = std::chrono::high_resolution_clock::now();
 
     #pragma acc parallel present(filteredImage[0 : width * height * dim],             \
-                             buffer[0 : width * height * dim]) 
+                             buffer[0 : width * height * dim]) num_gangs(1024)
     {
-        #pragma acc loop device_type(nvidia) independent
+        #pragma acc loop independent
         for (int y = 1; y <= height - 2; y++) {
-            #pragma acc loop device_type(nvidia) independent
+        #pragma acc loop independent
             for (int x = 1; x <= width -2; x++) {
                 
                 double r_sum, g_sum, b_sum;
@@ -67,19 +67,18 @@ int main(int argc, char **argv)
                 int red_3_2 = (r_row3_flat_base + 1) * dim; 
                 int red_3_3 = (r_row3_flat_base + 2) * dim;
 
-                // contiguous memory access, maybe? 
-                // filter value (1,1) (1,2) (1,3)   
-                r_sum = buffer[red_1_1] * (1/9) + buffer[red_1_2] * (1/9) + buffer[red_1_3] * (1/9);
-                g_sum = buffer[red_1_1+1] * (1/9) + buffer[red_1_2+1] * (1/9) + buffer[red_1_3+1] * (1/9); 
-                b_sum = buffer[red_1_1+2] * (1/9) + buffer[red_1_2+2] * (1/9) + buffer[red_1_3+2] * (1/9);
-                // filter value (2,1) (2,2) (2,3)   
-                r_sum += buffer[red_2_1] * (1/9) + buffer[red_2_2] * (1/9) + buffer[red_2_3] * (1/9);
-                g_sum += buffer[red_2_1+1] * (1/9) + buffer[red_2_2+1] * (1/9) + buffer[red_2_3+1] * (1/9);
-                b_sum += buffer[red_2_1+2] * (1/9) + buffer[red_2_2+2] * (1/9) + buffer[red_2_3+2] * (1/9);
-                // filter value (3,1) (3,2) (3,3)   
-                r_sum += buffer[red_3_1] * (1/9) + buffer[red_3_2] * (1/9) + buffer[red_3_3] * (1/9);
-                g_sum += buffer[red_3_1+1] * (1/9) + buffer[red_3_2+1] * (1/9) + buffer[red_3_3+1] * (1/9);
-                b_sum += buffer[red_3_1+2] * (1/9) + buffer[red_3_2+2] * (1/9) + buffer[red_3_3+2] * (1/9);
+                // contiguous memory access, maybe?    
+                r_sum = buffer[red_1_1] * filter[0][0] + buffer[red_1_2] * filter[0][1] + buffer[red_1_3] * filter[0][2];
+                g_sum = buffer[red_1_1+1] * filter[0][0] + buffer[red_1_2+1] * filter[0][1] + buffer[red_1_3+1] * filter[0][2]; 
+                b_sum = buffer[red_1_1+2] * filter[0][0] + buffer[red_1_2+2] * filter[0][1] + buffer[red_1_3+2] * filter[0][2];
+
+                r_sum += buffer[red_2_1] * filter[1][0] + buffer[red_2_2] * filter[1][1] + buffer[red_2_3] * filter[1][2];
+                g_sum += buffer[red_2_1+1] * filter[1][0] + buffer[red_2_2+1] * filter[1][1] + buffer[red_2_3+1] * filter[1][2];
+                b_sum += buffer[red_2_1+2] * filter[1][0] + buffer[red_2_2+2] * filter[1][1] + buffer[red_2_3+2] * filter[1][2];
+
+                r_sum += buffer[red_3_1] * filter[2][0] + buffer[red_3_2] * filter[2][1] + buffer[red_3_3] * filter[2][2];
+                g_sum += buffer[red_3_1+1] * filter[2][0] + buffer[red_3_2+1] * filter[2][1] + buffer[red_3_3+1] * filter[2][2];
+                b_sum += buffer[red_3_1+2] * filter[2][0] + buffer[red_3_2+2] * filter[2][1] + buffer[red_3_3+2] * filter[2][2];
 
                 int base_r = (y * width + x) * dim;
                 
@@ -88,7 +87,7 @@ int main(int argc, char **argv)
                 filteredImage[base_r+2] = static_cast<unsigned char>(b_sum); // B
             }
         }
-    }                         
+    }                    
 
     auto end_time = std::chrono::high_resolution_clock::now();
     #pragma acc exit data copyout(filteredImage[0 : width * height * dim], buffer[0 : width * height * dim])

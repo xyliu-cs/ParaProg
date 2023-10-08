@@ -12,12 +12,12 @@ echo "Current directory: ${CURRENT_DIR}"
 
 # Sequential PartB
 echo "Sequential PartB (Optimized with -O2)"
-srun -n 1 --cpus-per-task 1 ${CURRENT_DIR}/../../build/src/cpu/sequential_PartB ${CURRENT_DIR}/../../images/20K-RGB.jpg ${CURRENT_DIR}/../../images/20K-Smooth.jpg
+srun -n 1 --cpus-per-task 1 ${CURRENT_DIR}/../../build/src/cpu/sequential_PartB ${CURRENT_DIR}/../../images/20K-RGB.jpg ${CURRENT_DIR}/../../images/20K-Smooth-Sequential.jpg
 echo ""
 
 # SIMD PartB
 echo "SIMD(AVX2) PartB (Optimized with -O2)"
-srun -n 1 --cpus-per-task 1 ${CURRENT_DIR}/../../build/src/cpu/simd_PartB ${CURRENT_DIR}/../../images/20K-RGB.jpg ${CURRENT_DIR}/../../images/20K-Smooth.jpg
+srun -n 1 --cpus-per-task 1 ${CURRENT_DIR}/../../build/src/cpu/simd_PartB ${CURRENT_DIR}/../../images/20K-RGB.jpg ${CURRENT_DIR}/../../images/simd/20K-RGB-Smooth.jpg
 echo ""
 
 # MPI PartB
@@ -25,7 +25,7 @@ echo "MPI PartB (Optimized with -O2)"
 for num_processes in 1 2 4 8 16 32
 do
   echo "Number of processes: $num_processes"
-  srun -n $num_processes --cpus-per-task 1 --mpi=pmi2 ${CURRENT_DIR}/../../build/src/cpu/mpi_PartB ${CURRENT_DIR}/../../images/20K-RGB.jpg ${CURRENT_DIR}/../../images/20K-Smooth.jpg
+  srun -n $num_processes --cpus-per-task 1 --mpi=pmi2 ${CURRENT_DIR}/../../build/src/cpu/mpi_PartB ${CURRENT_DIR}/../../images/20K-RGB.jpg ${CURRENT_DIR}/../../images/mpi/20K-Smooth-$num_processes.jpg
   echo ""
 done
 
@@ -34,7 +34,7 @@ echo "Pthread PartB (Optimized with -O2)"
 for num_cores in 1 2 4 8 16 32
 do
   echo "Number of cores: $num_cores"
-  srun -n 1 --cpus-per-task $num_cores ${CURRENT_DIR}/../../build/src/cpu/pthread_PartB ${CURRENT_DIR}/../../images/20K-RGB.jpg ${CURRENT_DIR}/../../images/20K-Smooth.jpg ${num_cores}
+  srun -n 1 --cpus-per-task $num_cores ${CURRENT_DIR}/../../build/src/cpu/pthread_PartB ${CURRENT_DIR}/../../images/20K-RGB.jpg ${CURRENT_DIR}/../../images/pthread/20K-Smooth-$num_cores.jpg ${num_cores}
   echo ""
 done
 
@@ -43,16 +43,16 @@ echo "OpenMP PartB (Optimized with -O2)"
 for num_cores in 1 2 4 8 16 32
 do
   echo "Number of cores: $num_cores"
-  srun -n 1 --cpus-per-task $num_cores ${CURRENT_DIR}/../../build/src/cpu/openmp_PartB ${CURRENT_DIR}/../../images/20K-RGB.jpg ${CURRENT_DIR}/../../images/20K-Smooth.jpg
+  srun -n 1 --cpus-per-task $num_cores ${CURRENT_DIR}/../../build/src/cpu/openmp_PartB ${CURRENT_DIR}/../../images/20K-RGB.jpg ${CURRENT_DIR}/../../images/openmp/20K-Smooth-$num_cores.jpg ${num_cores}
   echo ""
 done
 
 # CUDA PartB
 echo "CUDA PartB"
-srun -n 1 --gpus 1 ${CURRENT_DIR}/../../build/src/gpu/cuda_PartB ${CURRENT_DIR}/../../images/20K-RGB.jpg ${CURRENT_DIR}/../../images/20K-Smooth.jpg
+srun -n 1 --gpus 1 ${CURRENT_DIR}/../../build/src/gpu/cuda_PartB ${CURRENT_DIR}/../../images/20K-RGB.jpg ${CURRENT_DIR}/../../images/cuda/20K-Smooth.jpg
 echo ""
 
 # OpenACC PartB
 echo "OpenACC PartB"
-srun -n 1 --gpus 1 ${CURRENT_DIR}/../../build/src/gpu/openacc_PartB ${CURRENT_DIR}/../../images/20K-RGB.jpg ${CURRENT_DIR}/../../images/20K-Smooth.jpg
+srun -n 1 --gpus 1 ${CURRENT_DIR}/../../build/src/gpu/openacc_PartB ${CURRENT_DIR}/../../images/20K-RGB.jpg ${CURRENT_DIR}/../../images/openacc/20K-Smooth.jpg
 echo ""

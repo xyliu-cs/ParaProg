@@ -13,8 +13,8 @@ const double filter[3][3] = {
 
 int main(int argc, char** argv) {
     // Verify input argument format
-    if (argc != 3) {
-        std::cerr << "Invalid argument, should be: ./executable /path/to/input/jpeg /path/to/output/jpeg\n";
+    if (argc != 4) {
+        std::cerr << "Invalid argument, should be: ./executable /path/to/input/jpeg /path/to/output/jpeg num_threads\n";
         return -1;
     }
     // Read input JPEG image
@@ -25,6 +25,8 @@ int main(int argc, char** argv) {
         std::cerr << "Failed to read input JPEG image\n";
         return -1;
     }
+
+    int num_threads_defined = std::stoi(argv[3]); // User-specified thread count
     
     // Separate R, G, B channels into three continuous arrays
     auto rChannel = new unsigned char[input_jpeg.width * input_jpeg.height];
@@ -41,7 +43,7 @@ int main(int argc, char** argv) {
     auto filteredImage = new unsigned char[input_jpeg.width * input_jpeg.height * input_jpeg.num_channels]();
     auto start_time = std::chrono::high_resolution_clock::now();
 
-    #pragma omp parallel for default(none) shared(rChannel, gChannel, bChannel, filteredImage, input_jpeg, filter)
+    #pragma omp parallel for num_threads(num_threads_defined) default(none) shared(rChannel, gChannel, bChannel, filteredImage, input_jpeg, filter)
     for (int y = 1; y <= input_jpeg.height - 2; y++) {
         for (int x = 1; x <= input_jpeg.width -2; x++) {
 
@@ -65,7 +67,6 @@ int main(int argc, char** argv) {
             filteredImage[base_r+2] = static_cast<unsigned char>(b_sum); // B
 
         }
-
 
     }
     
