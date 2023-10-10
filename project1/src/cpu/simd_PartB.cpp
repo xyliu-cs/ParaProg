@@ -46,7 +46,7 @@ int main(int argc, char** argv)
                                     10, 12, 13, 14, 
                                     3, 7, 11, 15);
 
-    auto filteredImage = new unsigned char [input_jpeg.width * input_jpeg.height * input_jpeg.num_channels];
+    auto filteredImage = new unsigned char [input_jpeg.width * input_jpeg.height * input_jpeg.num_channels + 16];
     
     for (int i = 0; i < input_jpeg.width * input_jpeg.height * input_jpeg.num_channels;++i)
         filteredImage[i] = 0;
