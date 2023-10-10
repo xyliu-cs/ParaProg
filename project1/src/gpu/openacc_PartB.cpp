@@ -4,11 +4,11 @@
 #include "utils.hpp"
 // #include <openacc.h> // OpenACC Header
 
-const double filter[3][3] = {
-            {1.0 / 9, 1.0 / 9, 1.0 / 9},
-            {1.0 / 9, 1.0 / 9, 1.0 / 9},
-            {1.0 / 9, 1.0 / 9, 1.0 / 9}
-        };
+const float filter[3][3] = {
+    {1.0 / 9, 1.0 / 9, 1.0 / 9},
+    {1.0 / 9, 1.0 / 9, 1.0 / 9},
+    {1.0 / 9, 1.0 / 9, 1.0 / 9}
+};
 
 int main(int argc, char **argv)
 {
@@ -46,48 +46,29 @@ int main(int argc, char **argv)
                              buffer[0 : width * height * dim]) num_gangs(1024)
     {
         #pragma acc loop independent
-        for (int y = 1; y <= height - 2; y++) {
-        #pragma acc loop independent
-            for (int x = 1; x <= width -2; x++) {
-                
-                double r_sum, g_sum, b_sum;
+        for (int x = width + 1; x <= width * (height - 1) - 2; x++) {
+            float r_sum, g_sum, b_sum;
 
-                int r_row1_flat_base = (y - 1) * width + (x - 1);
-                int red_1_1 = r_row1_flat_base * dim;
-                int red_1_2 = (r_row1_flat_base + 1) * dim; 
-                int red_1_3 = (r_row1_flat_base + 2) * dim;
+            // contiguous memory access, maybe?    
+            r_sum = buffer[(x - width - 1) * dim] * filter[0][0] + buffer[((x - width - 1) + 1) * dim] * filter[0][1] + buffer[((x - width - 1) + 2) * dim] * filter[0][2]
+                     + buffer[(x - 1) * dim] * filter[1][0] + buffer[((x - 1) + 1) * dim] * filter[1][1] + buffer[((x - 1) + 2) * dim] * filter[1][2]
+                     + buffer[(x + width - 1) * dim] * filter[2][0] + buffer[((x + width - 1) + 1) * dim] * filter[2][1] + buffer[((x + width - 1) + 2) * dim] * filter[2][2];
+            
+            g_sum = buffer[(x - width - 1) * dim + 1] * filter[0][0] + buffer[((x - width - 1) + 1) * dim + 1] * filter[0][1] + buffer[((x - width - 1) + 2) * dim + 1] * filter[0][2]
+                     + buffer[(x - 1) * dim + 1] * filter[1][0] + buffer[((x - 1) + 1) * dim + 1] * filter[1][1] + buffer[((x - 1) + 2) * dim + 1] * filter[1][2]
+                     + buffer[(x + width - 1) * dim + 1] * filter[2][0] + buffer[((x + width - 1) + 1) * dim + 1] * filter[2][1] + buffer[((x + width - 1) + 2) * dim + 1] * filter[2][2];
 
-                int r_row2_flat_base = y * width + (x - 1);
-                int red_2_1 = r_row2_flat_base * dim;
-                int red_2_2 = (r_row2_flat_base + 1) * dim; 
-                int red_2_3 = (r_row2_flat_base + 2) * dim;
+            b_sum = buffer[(x - width - 1) * dim + 2] * filter[0][0] + buffer[((x - width - 1) + 1) * dim + 2] * filter[0][1] + buffer[((x - width - 1) + 2) * dim + 2] * filter[0][2]
+                     + buffer[(x - 1) * dim + 2] * filter[1][0] + buffer[((x - 1) + 1) * dim + 2] * filter[1][1] + buffer[((x - 1) + 2) * dim + 2] * filter[1][2]
+                     + buffer[(x + width - 1) * dim + 2] * filter[2][0] + buffer[((x + width - 1) + 1) * dim + 2] * filter[2][1] + buffer[((x + width - 1) + 2) * dim + 2] * filter[2][2];
 
-                int r_row3_flat_base = (y + 1) * width + (x - 1);
-                int red_3_1 = r_row3_flat_base * dim;
-                int red_3_2 = (r_row3_flat_base + 1) * dim; 
-                int red_3_3 = (r_row3_flat_base + 2) * dim;
-
-                // contiguous memory access, maybe?    
-                r_sum = buffer[red_1_1] * filter[0][0] + buffer[red_1_2] * filter[0][1] + buffer[red_1_3] * filter[0][2];
-                g_sum = buffer[red_1_1+1] * filter[0][0] + buffer[red_1_2+1] * filter[0][1] + buffer[red_1_3+1] * filter[0][2]; 
-                b_sum = buffer[red_1_1+2] * filter[0][0] + buffer[red_1_2+2] * filter[0][1] + buffer[red_1_3+2] * filter[0][2];
-
-                r_sum += buffer[red_2_1] * filter[1][0] + buffer[red_2_2] * filter[1][1] + buffer[red_2_3] * filter[1][2];
-                g_sum += buffer[red_2_1+1] * filter[1][0] + buffer[red_2_2+1] * filter[1][1] + buffer[red_2_3+1] * filter[1][2];
-                b_sum += buffer[red_2_1+2] * filter[1][0] + buffer[red_2_2+2] * filter[1][1] + buffer[red_2_3+2] * filter[1][2];
-
-                r_sum += buffer[red_3_1] * filter[2][0] + buffer[red_3_2] * filter[2][1] + buffer[red_3_3] * filter[2][2];
-                g_sum += buffer[red_3_1+1] * filter[2][0] + buffer[red_3_2+1] * filter[2][1] + buffer[red_3_3+1] * filter[2][2];
-                b_sum += buffer[red_3_1+2] * filter[2][0] + buffer[red_3_2+2] * filter[2][1] + buffer[red_3_3+2] * filter[2][2];
-
-                int base_r = (y * width + x) * dim;
-                
-                filteredImage[base_r] = static_cast<unsigned char>(r_sum);   // R
-                filteredImage[base_r+1] = static_cast<unsigned char>(g_sum); // G
-                filteredImage[base_r+2] = static_cast<unsigned char>(b_sum); // B
-            }
+            
+            filteredImage[x * dim] = static_cast<unsigned char>(r_sum);   // R
+            filteredImage[x * dim + 1] = static_cast<unsigned char>(g_sum); // G
+            filteredImage[x * dim + 2] = static_cast<unsigned char>(b_sum); // B
+            
         }
-    }                    
+    }                  
 
     auto end_time = std::chrono::high_resolution_clock::now();
     #pragma acc exit data copyout(filteredImage[0 : width * height * dim], buffer[0 : width * height * dim])
