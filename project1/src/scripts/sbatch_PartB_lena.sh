@@ -43,7 +43,7 @@ echo "OpenMP PartB (Optimized with -O2)"
 for num_cores in 1 2 4 8 16 32
 do
   echo "Number of cores: $num_cores"
-  srun -n 1 --cpus-per-task $num_cores ${CURRENT_DIR}/../../build/src/cpu/openmp_PartB ${CURRENT_DIR}/../../images/Lena-RGB.jpg ${CURRENT_DIR}/../../images/openmp/Lena-Smooth-$num_cores.jpg
+  srun -n 1 --cpus-per-task $num_cores ${CURRENT_DIR}/../../build/src/cpu/openmp_PartB ${CURRENT_DIR}/../../images/Lena-RGB.jpg ${CURRENT_DIR}/../../images/openmp/Lena-Smooth-$num_cores.jpg ${num_cores}
   echo ""
 done
 
