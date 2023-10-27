@@ -1,0 +1,70 @@
+cd /path/to/project2/build
+# Naive
+./src/naive ../matrices/matrix5.txt ../matrices/matrix6.txt ../results/naive.txt
+
+
+
+# Memory Locality
+rm -rf ../build/src/locality
+g++ -O2 locality.cpp matrix.cpp -o ../build/src/locality
+g++ -g -O2 locality.cpp matrix.cpp -o ../build/src/locality
+
+../build/src/locality ../matrices/matrix5.txt ../matrices/matrix6.txt ../results/locality.txt
+../build/src/locality ../matrices/matrix7.txt ../matrices/matrix8.txt ../results/locality.txt
+
+perf record ../build/src/locality ../matrices/matrix5.txt ../matrices/matrix6.txt ../results/locality.txt
+perf stat ../build/src/locality ../matrices/matrix5.txt ../matrices/matrix6.txt ../results/locality.txt
+
+
+
+perf record --call-graph dwarf ../build/src/locality ../matrices/matrix5.txt ../matrices/matrix6.txt ../results/locality.txt
+
+
+
+# SIMD
+g++ -g -O2 -mavx2 simd.cpp matrix.cpp -o ../build/src/simd
+g++ -O2 -mavx2 simd.cpp matrix.cpp -o ../build/src/simd
+
+../build/src/simd ../matrices/matrix5.txt ../matrices/matrix6.txt ../results/simd.txt
+../build/src/simd ../matrices/matrix7.txt ../matrices/matrix8.txt ../results/simd.txt
+
+g++ -g -O2 -mavx2 simd.cpp matrix.cpp -o ../build/src/simd
+perf record ../build/src/simd ../matrices/matrix5.txt ../matrices/matrix6.txt ../results/simd.txt
+
+
+# OpenMP
+./src/openmp $thread_num /path/to/matrixA /path/to/matrixB /path/to/multiply_result
+g++ -O2 -fopenmp -mavx2 openmp.cpp matrix.cpp -o ../build/src/openmp
+../build/src/openmp 32 ../matrices/matrix5.txt ../matrices/matrix6.txt ../results/openmp.txt
+../build/src/openmp 32 ../matrices/matrix7.txt ../matrices/matrix8.txt ../results/openmp.txt
+
+
+
+
+# MPI
+mpirun -np $process_num ./src/mpi $thread_num_per_process /path/to/matrixA /path/to/matrixB /path/to/multiply_result
+g++ -O2 -fopenmp -mavx2 openmp.cpp matrix.cpp -o ../build/src/openmp
+../build/src/openmp ../matrices/matrix5.txt ../matrices/matrix6.txt ../results/openmp.txt
+
+
+g++ -g -O2 -fopenmp -mavx2 simd.cpp matrix.cpp -o ../build/src/simd
+
+
+srun -n 1 --cpus-per-task 1 perf record -e cpu-cycles,cache-misses,page-faults -g -o ./profiling/perf_naive.data ./build/src/naive ./matrices/matrix5.txt ./matrices/matrix6.txt ./results/naive1.txt
+perf report -i ./profiling/perf_naive.data
+
+srun -n 1 --cpus-per-task 1 perf record -e cpu-cycles,cache-misses,page-faults -g -o ./profiling/perf_locality.data ./build/src/locality ./matrices/matrix5.txt ./matrices/matrix6.txt ./results/locality1.txt
+perf report -i ./profiling/perf_locality.data
+
+srun -n 1 --cpus-per-task 1 perf record -e cpu-cycles,cache-misses,page-faults -g -o ./profiling/perf_simd.data ./build/src/simd ./matrices/matrix5.txt ./matrices/matrix6.txt ./results/simd1.txt
+perf report -i ./profiling/perf_simd.data
+
+srun -n 1 --cpus-per-task 32 perf record -e cpu-cycles,cache-misses,page-faults -g -o ./profiling/perf_openmp.data ./build/src/openmp 32 ./matrices/matrix5.txt ./matrices/matrix6.txt ./results/openmp1.txt
+perf report -i ./profiling/perf_openmp.data
+
+
+mpirun -np 16 perf stat -e cpu-cycles,cache-misses,page-faults ./build/src/mpi ./matrices/matrix5.txt ./matrices/matrix6.txt ./results/mpi.txt
+
+srun -n 16 --cpus-per-task 2 --mpi=pmi2 perf stat -e cpu-cycles,cache-misses,page-faults ./build/src/mpi 2 ./matrices/matrix5.txt ./matrices/matrix6.txt ./results/mpi1.txt
+
+srun -n 1 --cpus-per-task 1 perf stat -e cpu-cycles,cache-misses,page-faults
