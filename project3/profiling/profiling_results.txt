@@ -1,0 +1,2495 @@
+[quicksort_mpi]
+Running with 1 cores
+
+ Performance counter stats for './build/src/quicksort/quicksort_mpi 100000000':
+
+    80,492,826,304      cpu-cycles:u                                                
+       134,458,399      cache-misses:u                                              
+             5,357      page-faults:u                                               
+
+      28.274908683 seconds time elapsed
+
+      27.828447000 seconds user
+       0.362159000 seconds sys
+
+
+--------------------------------------
+Running with 2 cores
+
+ Performance counter stats for './build/src/quicksort/quicksort_mpi 100000000':
+
+    95,555,281,773      cpu-cycles:u                                                
+       111,062,491      cache-misses:u                                              
+             7,629      page-faults:u                                               
+
+      33.423418566 seconds time elapsed
+
+      33.064892000 seconds user
+       0.273362000 seconds sys
+
+
+
+ Performance counter stats for './build/src/quicksort/quicksort_mpi 100000000':
+
+    92,098,404,319      cpu-cycles:u                                                
+        41,216,484      cache-misses:u                                              
+             3,784      page-faults:u                                               
+
+      33.423491109 seconds time elapsed
+
+      32.177687000 seconds user
+       1.150307000 seconds sys
+
+
+--------------------------------------
+Running with 4 cores
+
+ Performance counter stats for './build/src/quicksort/quicksort_mpi 100000000':
+
+
+ Performance counter stats for './build/src/quicksort/quicksort_mpi 100000000':
+
+    81,890,107,405      cpu-cycles:u                                                
+    81,996,963,899      cpu-cycles:u                                                
+        25,897,998      cache-misses:u                                              
+             3,685      page-faults:u                                               
+
+      29.777015752 seconds time elapsed
+
+      28.766182000 seconds user
+       0.924787000 seconds sys
+
+
+        25,020,688      cache-misses:u                                              
+             3,648      page-faults:u                                               
+
+      29.777613393 seconds time elapsed
+
+      28.666833000 seconds user
+       1.024599000 seconds sys
+
+
+
+ Performance counter stats for './build/src/quicksort/quicksort_mpi 100000000':
+
+    81,337,039,259      cpu-cycles:u                                                
+        23,297,823      cache-misses:u                                              
+             3,527      page-faults:u                                               
+
+      30.125316243 seconds time elapsed
+
+
+ Performance counter stats for './build/src/quicksort/quicksort_mpi 100000000':
+
+    84,944,780,514      cpu-cycles:u                                                
+      28.488449000 seconds user
+       1.203147000 seconds sys
+
+
+        99,305,600      cache-misses:u                                              
+             7,466      page-faults:u                                               
+
+      30.101953625 seconds time elapsed
+
+      29.423821000 seconds user
+       0.277347000 seconds sys
+
+
+--------------------------------------
+Running with 8 cores
+
+ Performance counter stats for './build/src/quicksort/quicksort_mpi 100000000':
+
+
+    78,643,223,129      cpu-cycles:u                                                
+        16,701,887      cache-misses:u                                              
+             3,718      page-faults:u                                               
+
+      29.188436368 seconds time elapsed
+
+      27.594011000 seconds user
+       1.023589000 seconds sys
+
+
+
+ Performance counter stats for './build/src/quicksort/quicksort_mpi 100000000':
+
+    78,674,995,708      cpu-cycles:u                                                
+        15,244,299      cache-misses:u                                              
+ Performance counter stats for './build/src/quicksort/quicksort_mpi 100000000':
+
+    78,691,222,020      cpu-cycles:u                                                
+        16,292,256      cache-misses:u                                              
+             3,408      page-faults:u                                               
+
+      28.701894068 seconds time elapsed
+
+      27.608024000 seconds user
+       1.009623000 seconds sys
+
+
+             3,393      page-faults:u                                               
+
+      28.701442225 seconds time elapsed
+
+      27.606445000 seconds user
+       1.011634000 seconds sys
+
+
+
+ Performance counter stats for './build/src/quicksort/quicksort_mpi 100000000':
+
+    78,849,220,412      cpu-cycles:u                                                
+        15,072,702      cache-misses:u                                              
+             3,372      page-faults:u                                               
+
+      28.701502188 seconds time elapsed
+
+      27.578682000 seconds user
+       1.039537000 seconds sys
+
+
+
+ Performance counter stats for './build/src/quicksort/quicksort_mpi 100000000':
+
+    78,859,110,420      cpu-cycles:u                                                
+        14,751,808      cache-misses:u                                              
+             3,802      page-faults:u                                               
+
+      29.170881018 seconds time elapsed
+
+      27.661496000 seconds user
+       0.954704000 seconds sys
+
+
+
+ Performance counter stats for './build/src/quicksort/quicksort_mpi 100000000':
+
+    77,994,801,643      cpu-cycles:u                                                
+        15,997,339      cache-misses:u                                              
+             3,422      page-faults:u                                               
+
+      29.236570310 seconds time elapsed
+
+      27.361989000 seconds user
+       1.256967000 seconds sys
+
+
+
+ Performance counter stats for './build/src/quicksort/quicksort_mpi 100000000':
+
+    78,637,551,588      cpu-cycles:u                                                
+        16,831,234      cache-misses:u                                              
+             3,781      page-faults:u                                               
+
+      28.708091619 seconds time elapsed
+
+      27.655312000 seconds user
+       0.963676000 seconds sys
+
+
+
+ Performance counter stats for './build/src/quicksort/quicksort_mpi 100000000':
+
+    81,822,674,650      cpu-cycles:u                                                
+       100,043,775      cache-misses:u                                              
+             7,980      page-faults:u                                               
+
+      29.184714701 seconds time elapsed
+
+      28.371660000 seconds user
+       0.257380000 seconds sys
+
+
+--------------------------------------
+Running with 16 cores
+
+ Performance counter stats for './build/src/quicksort/quicksort_mpi 100000000':
+
+    78,409,643,152      cpu-cycles:u                                                
+        14,006,490      cache-misses:u                                              
+             3,502      page-faults:u                                               
+
+      28.705672209 seconds time elapsed
+
+      27.481692000 seconds user
+       1.136340000 seconds sys
+
+
+
+ Performance counter stats for './build/src/quicksort/quicksort_mpi 100000000':
+
+    78,524,204,588      cpu-cycles:u                                                
+        13,580,533      cache-misses:u                                              
+             3,543      page-faults:u                                               
+
+      28.705465369 seconds time elapsed
+
+      27.571919000 seconds user
+       1.045532000 seconds sys
+
+
+
+ Performance counter stats for './build/src/quicksort/quicksort_mpi 100000000':
+
+    78,509,859,819      cpu-cycles:u                                                
+        14,446,000      cache-misses:u                                              
+             3,479      page-faults:u                                               
+
+      28.709522468 seconds time elapsed
+
+      27.574566000 seconds user
+       1.043523000 seconds sys
+
+
+
+ Performance counter stats for './build/src/quicksort/quicksort_mpi 100000000':
+
+    78,531,759,797      cpu-cycles:u                                                
+        15,313,126      cache-misses:u                                              
+             3,462      page-faults:u                                               
+
+      28.724038303 seconds time elapsed
+
+      27.551889000 seconds user
+       1.066479000 seconds sys
+
+
+
+ Performance counter stats for './build/src/quicksort/quicksort_mpi 100000000':
+
+
+ Performance counter stats for './build/src/quicksort/quicksort_mpi 100000000':
+
+
+ Performance counter stats for './build/src/quicksort/quicksort_mpi 100000000':
+
+    78,523,568,141      cpu-cycles:u                                                
+        12,368,413      cache-misses:u                                              
+             3,641      page-faults:u                                               
+
+      28.701089418 seconds time elapsed
+
+      27.608473000 seconds user
+       1.008606000 seconds sys
+
+
+    78,438,722,741      cpu-cycles:u                                                
+        13,106,356      cache-misses:u                                              
+             3,272      page-faults:u                                               
+
+      28.702967983 seconds time elapsed
+
+      27.494986000 seconds user
+       1.122386000 seconds sys
+
+
+    78,471,270,969      cpu-cycles:u                                                
+        12,289,824      cache-misses:u                                              
+             3,674      page-faults:u                                               
+
+      28.708974917 seconds time elapsed
+
+      27.506017000 seconds user
+       1.111414000 seconds sys
+
+
+
+ Performance counter stats for './build/src/quicksort/quicksort_mpi 100000000':
+
+    78,561,233,071      cpu-cycles:u                                                
+        15,063,368      cache-misses:u                                              
+             3,546      page-faults:u                                               
+
+      28.705495860 seconds time elapsed
+
+      27.590347000 seconds user
+       1.027592000 seconds sys
+
+
+
+
+ Performance counter stats for './build/src/quicksort/quicksort_mpi 100000000':
+
+
+ Performance counter stats for './build/src/quicksort/quicksort_mpi 100000000':
+
+
+ Performance counter stats for './build/src/quicksort/quicksort_mpi 100000000':
+
+
+ Performance counter stats for './build/src/quicksort/quicksort_mpi 100000000':
+
+    77,770,976,966      cpu-cycles:u                                                
+ Performance counter stats for './build/src/quicksort/quicksort_mpi 100000000':
+
+    78,368,015,195      cpu-cycles:u                                                
+        14,477,121      cache-misses:u                                              
+             3,606      page-faults:u                                               
+
+      29.101647840 seconds time elapsed
+
+      27.555648000 seconds user
+       1.062518000 seconds sys
+
+
+    78,450,905,956      cpu-cycles:u                                                
+        12,848,215      cache-misses:u                                              
+             3,619      page-faults:u                                               
+
+      29.118025661 seconds time elapsed
+
+      27.602291000 seconds user
+       1.014621000 seconds sys
+
+
+    78,480,200,408      cpu-cycles:u                                                
+        13,011,724      cache-misses:u                                              
+             3,506      page-faults:u                                               
+
+      29.186593581 seconds time elapsed
+
+      27.537577000 seconds user
+       1.081469000 seconds sys
+
+
+
+ Performance counter stats for './build/src/quicksort/quicksort_mpi 100000000':
+
+    78,438,063,670      cpu-cycles:u                                                
+        12,947,361      cache-misses:u                                              
+             3,809      page-faults:u                                               
+
+      29.112221280 seconds time elapsed
+
+      27.591061000 seconds user
+       1.024477000 seconds sys
+
+
+
+ Performance counter stats for './build/src/quicksort/quicksort_mpi 100000000':
+
+    78,480,204,576      cpu-cycles:u                                                
+        12,742,464      cache-misses:u                                              
+             3,829      page-faults:u                                               
+
+      29.091303273 seconds time elapsed
+
+      27.548391000 seconds user
+       1.067380000 seconds sys
+
+
+    78,479,195,927      cpu-cycles:u                                                
+        14,324,659      cache-misses:u                                              
+             3,603      page-faults:u                                               
+
+      29.095465774 seconds time elapsed
+
+      27.654395000 seconds user
+       0.963713000 seconds sys
+
+
+        13,769,042      cache-misses:u                                              
+             3,959      page-faults:u                                               
+
+      29.127120573 seconds time elapsed
+
+      27.314265000 seconds user
+       1.303957000 seconds sys
+
+
+
+ Performance counter stats for './build/src/quicksort/quicksort_mpi 100000000':
+
+    81,747,921,890      cpu-cycles:u                                                
+        98,118,052      cache-misses:u                                              
+             7,581      page-faults:u                                               
+
+      29.133004556 seconds time elapsed
+
+      28.349369000 seconds user
+       0.281338000 seconds sys
+
+
+--------------------------------------
+Running with 32 cores
+
+ Performance counter stats for './build/src/quicksort/quicksort_mpi 100000000':
+
+    80,157,973,230      cpu-cycles:u                                                
+        11,714,003      cache-misses:u                                              
+             3,665      page-faults:u                                               
+
+      29.747758722 seconds time elapsed
+
+      28.209157000 seconds user
+       1.214208000 seconds sys
+
+
+
+ Performance counter stats for './build/src/quicksort/quicksort_mpi 100000000':
+
+
+ Performance counter stats for './build/src/quicksort/quicksort_mpi 100000000':
+
+    80,147,815,792      cpu-cycles:u                                                
+        12,327,374      cache-misses:u                                              
+             3,683      page-faults:u                                               
+
+    80,166,416,287      cpu-cycles:u                                                
+        11,947,661      cache-misses:u                                              
+             3,319      page-faults:u                                               
+
+      29.673926503 seconds time elapsed
+
+      28.220832000 seconds user
+       1.203136000 seconds sys
+
+
+      29.640293416 seconds time elapsed
+
+      28.162685000 seconds user
+       1.258990000 seconds sys
+
+
+
+ Performance counter stats for './build/src/quicksort/quicksort_mpi 100000000':
+
+    80,161,020,941      cpu-cycles:u                                                
+        11,660,318      cache-misses:u                                              
+             3,722      page-faults:u                                               
+
+      29.896114134 seconds time elapsed
+
+      28.177807000 seconds user
+       1.243945000 seconds sys
+
+
+
+ Performance counter stats for './build/src/quicksort/quicksort_mpi 100000000':
+
+    80,165,595,181      cpu-cycles:u                                                
+        13,241,256      cache-misses:u                                              
+             3,493      page-faults:u                                               
+
+      30.324125391 seconds time elapsed
+
+      28.164037000 seconds user
+       1.260048000 seconds sys
+
+
+
+ Performance counter stats for './build/src/quicksort/quicksort_mpi 100000000':
+
+    80,175,769,095      cpu-cycles:u                                                
+        12,719,937      cache-misses:u                                              
+             3,561      page-faults:u                                               
+
+      29.924141197 seconds time elapsed
+
+      28.171822000 seconds user
+       1.253056000 seconds sys
+
+
+
+ Performance counter stats for './build/src/quicksort/quicksort_mpi 100000000':
+
+    80,146,792,624      cpu-cycles:u                                                
+        13,377,679      cache-misses:u                                              
+             3,559      page-faults:u                                               
+
+      29.845724151 seconds time elapsed
+
+      28.170460000 seconds user
+       1.254126000 seconds sys
+
+
+
+ Performance counter stats for './build/src/quicksort/quicksort_mpi 100000000':
+
+    79,952,093,600      cpu-cycles:u                                                
+        13,659,663      cache-misses:u                                              
+             3,664      page-faults:u                                               
+
+      30.879279929 seconds time elapsed
+
+      28.142268000 seconds user
+       1.283955000 seconds sys
+
+
+
+ Performance counter stats for './build/src/quicksort/quicksort_mpi 100000000':
+
+    80,175,729,658      cpu-cycles:u                                                
+        12,341,130      cache-misses:u                                              
+             3,706      page-faults:u                                               
+
+      30.151857503 seconds time elapsed
+
+      28.196182000 seconds user
+       1.228046000 seconds sys
+
+
+
+ Performance counter stats for './build/src/quicksort/quicksort_mpi 100000000':
+
+    80,135,068,407      cpu-cycles:u                                                
+        12,823,640      cache-misses:u                                              
+             3,580      page-faults:u                                               
+
+      29.796246178 seconds time elapsed
+
+      28.221133000 seconds user
+       1.202109000 seconds sys
+
+
+
+ Performance counter stats for './build/src/quicksort/quicksort_mpi 100000000':
+
+    80,119,422,896      cpu-cycles:u                                                
+        13,158,082      cache-misses:u                                              
+             3,597      page-faults:u                                               
+
+      29.956784076 seconds time elapsed
+
+      28.303846000 seconds user
+       1.121300000 seconds sys
+
+
+
+
+ Performance counter stats for './build/src/quicksort/quicksort_mpi 100000000':
+
+ Performance counter stats for './build/src/quicksort/quicksort_mpi 100000000':
+
+    80,185,947,331      cpu-cycles:u                                                
+        12,368,175      cache-misses:u                                              
+             3,797      page-faults:u                                               
+
+      29.535336398 seconds time elapsed
+
+      28.153450000 seconds user
+       1.273036000 seconds sys
+
+
+    80,210,065,241      cpu-cycles:u                                                
+        12,338,338      cache-misses:u                                              
+             3,683      page-faults:u                                               
+
+      29.515755593 seconds time elapsed
+
+      28.188110000 seconds user
+       1.238149000 seconds sys
+
+
+
+ Performance counter stats for './build/src/quicksort/quicksort_mpi 100000000':
+
+    80,176,664,323      cpu-cycles:u                                                
+        12,892,690      cache-misses:u                                              
+             3,620      page-faults:u                                               
+
+      29.676199744 seconds time elapsed
+
+      28.179314000 seconds user
+       1.246139000 seconds sys
+
+
+
+ Performance counter stats for './build/src/quicksort/quicksort_mpi 100000000':
+
+    80,145,114,757      cpu-cycles:u                                                
+        12,926,332      cache-misses:u                                              
+             3,683      page-faults:u                                               
+
+      29.522484017 seconds time elapsed
+
+      28.163894000 seconds user
+       1.262037000 seconds sys
+
+
+
+ Performance counter stats for './build/src/quicksort/quicksort_mpi 100000000':
+
+    79,721,563,821      cpu-cycles:u                                                
+        13,314,169      cache-misses:u                                              
+             3,556      page-faults:u                                               
+
+      30.287660810 seconds time elapsed
+
+      28.087258000 seconds user
+       1.338866000 seconds sys
+
+
+
+ Performance counter stats for './build/src/quicksort/quicksort_mpi 100000000':
+
+    80,240,554,304      cpu-cycles:u                                                
+        13,177,345      cache-misses:u                                              
+             3,490      page-faults:u                                               
+
+      29.516289368 seconds time elapsed
+
+      28.209678000 seconds user
+       1.216226000 seconds sys
+
+
+
+ Performance counter stats for './build/src/quicksort/quicksort_mpi 100000000':
+
+    80,309,198,636      cpu-cycles:u                                                
+        12,344,028      cache-misses:u                                              
+             3,468      page-faults:u                                               
+
+      29.873582181 seconds time elapsed
+
+      28.286563000 seconds user
+       1.135213000 seconds sys
+
+
+
+ Performance counter stats for './build/src/quicksort/quicksort_mpi 100000000':
+
+
+ Performance counter stats for './build/src/quicksort/quicksort_mpi 100000000':
+
+    80,228,418,883      cpu-cycles:u                                                
+        12,882,977      cache-misses:u                                              
+
+ Performance counter stats for './build/src/quicksort/quicksort_mpi 100000000':
+
+    80,179,135,856      cpu-cycles:u                                                
+        12,766,116      cache-misses:u                                              
+             3,451      page-faults:u                                               
+
+      29.526181409 seconds time elapsed
+
+      28.190600000 seconds user
+    80,231,079,811      cpu-cycles:u                                                
+        13,045,778      cache-misses:u                                              
+             3,767      page-faults:u                                               
+
+      29.514271284 seconds time elapsed
+
+      28.242901000 seconds user
+       1.184228000 seconds sys
+
+
+             3,737      page-faults:u                                               
+
+      29.536301004 seconds time elapsed
+
+      28.216475000 seconds user
+       1.210146000 seconds sys
+
+
+       1.236044000 seconds sys
+
+
+
+ Performance counter stats for './build/src/quicksort/quicksort_mpi 100000000':
+
+    80,268,532,604      cpu-cycles:u                                                
+        12,987,620      cache-misses:u                                              
+             3,843      page-faults:u                                               
+
+      29.556948689 seconds time elapsed
+
+      28.156957000 seconds user
+       1.270021000 seconds sys
+
+
+
+ Performance counter stats for './build/src/quicksort/quicksort_mpi 100000000':
+
+    80,191,514,438      cpu-cycles:u                                                
+        12,520,249      cache-misses:u                                              
+             3,912      page-faults:u                                               
+
+      29.525906448 seconds time elapsed
+
+      28.165117000 seconds user
+       1.262047000 seconds sys
+
+
+
+ Performance counter stats for './build/src/quicksort/quicksort_mpi 100000000':
+
+    80,213,452,733      cpu-cycles:u                                                
+        12,803,201      cache-misses:u                                              
+             3,648      page-faults:u                                               
+
+      29.514103425 seconds time elapsed
+
+      28.141135000 seconds user
+       1.286035000 seconds sys
+
+
+
+ Performance counter stats for './build/src/quicksort/quicksort_mpi 100000000':
+
+    80,223,675,393      cpu-cycles:u                                                
+        11,649,038      cache-misses:u                                              
+             3,855      page-faults:u                                               
+
+      29.780364784 seconds time elapsed
+
+      28.237190000 seconds user
+       1.189270000 seconds sys
+
+
+
+ Performance counter stats for './build/src/quicksort/quicksort_mpi 100000000':
+
+    80,215,040,937      cpu-cycles:u                                                
+        12,401,532      cache-misses:u                                              
+             3,634      page-faults:u                                               
+
+      29.521841498 seconds time elapsed
+
+      28.171680000 seconds user
+       1.255001000 seconds sys
+
+
+
+ Performance counter stats for './build/src/quicksort/quicksort_mpi 100000000':
+
+    80,233,805,221      cpu-cycles:u                                                
+        13,393,448      cache-misses:u                                              
+             3,876      page-faults:u                                               
+
+      29.517075236 seconds time elapsed
+
+      28.173727000 seconds user
+       1.254050000 seconds sys
+
+
+
+ Performance counter stats for './build/src/quicksort/quicksort_mpi 100000000':
+
+    80,139,891,208      cpu-cycles:u                                                
+        13,134,893      cache-misses:u                                              
+             3,909      page-faults:u                                               
+
+      29.517274221 seconds time elapsed
+
+      28.134829000 seconds user
+       1.293004000 seconds sys
+
+
+
+ Performance counter stats for './build/src/quicksort/quicksort_mpi 100000000':
+
+    80,234,163,511      cpu-cycles:u                                                
+        12,901,349      cache-misses:u                                              
+             3,903      page-faults:u                                               
+
+      29.515278824 seconds time elapsed
+
+      28.231837000 seconds user
+       1.195199000 seconds sys
+
+
+
+ Performance counter stats for './build/src/quicksort/quicksort_mpi 100000000':
+
+    80,200,775,748      cpu-cycles:u                                                
+        12,849,461      cache-misses:u                                              
+             3,845      page-faults:u                                               
+
+      29.564388696 seconds time elapsed
+
+      28.202744000 seconds user
+       1.225078000 seconds sys
+
+
+
+ Performance counter stats for './build/src/quicksort/quicksort_mpi 100000000':
+
+    80,220,055,578      cpu-cycles:u                                                
+        12,939,859      cache-misses:u                                              
+             3,886      page-faults:u                                               
+
+      29.524831383 seconds time elapsed
+
+      28.121663000 seconds user
+       1.305873000 seconds sys
+
+
+
+ Performance counter stats for './build/src/quicksort/quicksort_mpi 100000000':
+
+    83,656,971,805      cpu-cycles:u                                                
+        97,670,237      cache-misses:u                                              
+            10,516      page-faults:u                                               
+
+      30.157941606 seconds time elapsed
+
+      29.008869000 seconds user
+       0.431985000 seconds sys
+
+
+--------------------------------------
+[bucketsort_mpi]
+Running with 1 cores
+
+ Performance counter stats for './build/src/bucketsort/bucketsort_mpi 100000000 2500000':
+
+    68,722,478,179      cpu-cycles:u                                                
+       326,325,246      cache-misses:u                                              
+           280,842      page-faults:u                                               
+
+      24.846212393 seconds time elapsed
+
+      23.767640000 seconds user
+       1.002706000 seconds sys
+
+
+--------------------------------------
+Running with 2 cores
+
+ Performance counter stats for './build/src/bucketsort/bucketsort_mpi 100000000 2500000':
+
+    74,068,581,674      cpu-cycles:u                                                
+       146,910,784      cache-misses:u                                              
+            87,800      page-faults:u                                               
+
+      27.256020457 seconds time elapsed
+
+      25.931752000 seconds user
+       1.244109000 seconds sys
+
+
+
+ Performance counter stats for './build/src/bucketsort/bucketsort_mpi 100000000 2500000':
+
+    76,736,818,433      cpu-cycles:u                                                
+       213,739,707      cache-misses:u                                              
+           140,348      page-faults:u                                               
+
+      27.265909624 seconds time elapsed
+
+      26.581308000 seconds user
+       0.614527000 seconds sys
+
+
+--------------------------------------
+Running with 4 cores
+
+ Performance counter stats for './build/src/bucketsort/bucketsort_mpi 100000000 2500000':
+
+    67,041,468,784      cpu-cycles:u                                                
+        84,392,978      cache-misses:u                                              
+            74,114      page-faults:u                                               
+
+      24.884775222 seconds time elapsed
+
+      23.490527000 seconds user
+       0.984674000 seconds sys
+
+
+
+ Performance counter stats for './build/src/bucketsort/bucketsort_mpi 100000000 2500000':
+
+    68,792,490,610      cpu-cycles:u                                                
+       152,669,312      cache-misses:u                                              
+            49,099      page-faults:u                                               
+
+      24.860825082 seconds time elapsed
+
+      23.866824000 seconds user
+       0.620828000 seconds sys
+
+
+
+ Performance counter stats for './build/src/bucketsort/bucketsort_mpi 100000000 2500000':
+
+    67,186,601,510      cpu-cycles:u                                                
+        85,550,293      cache-misses:u                                              
+            73,959      page-faults:u                                               
+
+      24.553773727 seconds time elapsed
+
+      23.465473000 seconds user
+       1.013644000 seconds sys
+
+
+
+ Performance counter stats for './build/src/bucketsort/bucketsort_mpi 100000000 2500000':
+
+    67,091,654,031      cpu-cycles:u                                                
+        85,320,606      cache-misses:u                                              
+            73,907      page-faults:u                                               
+
+      24.552260048 seconds time elapsed
+
+      23.461446000 seconds user
+       1.017257000 seconds sys
+
+
+--------------------------------------
+Running with 8 cores
+
+ Performance counter stats for './build/src/bucketsort/bucketsort_mpi 100000000 2500000':
+
+    63,442,652,732      cpu-cycles:u                                                
+        57,466,904      cache-misses:u                                              
+            38,999      page-faults:u                                               
+
+      23.198941593 seconds time elapsed
+
+      22.227253000 seconds user
+       0.899904000 seconds sys
+
+
+
+ Performance counter stats for './build/src/bucketsort/bucketsort_mpi 100000000 2500000':
+
+
+ Performance counter stats for './build/src/bucketsort/bucketsort_mpi 100000000 2500000':
+
+    62,860,003,491      cpu-cycles:u                                                
+        57,002,271      cache-misses:u                                              
+            38,893      page-faults:u                                               
+
+      23.784808014 seconds time elapsed
+
+      22.071952000 seconds user
+       1.055511000 seconds sys
+
+
+    63,579,498,166      cpu-cycles:u                                                
+        56,698,929      cache-misses:u                                              
+            38,999      page-faults:u                                               
+
+      23.748708223 seconds time elapsed
+
+      22.251739000 seconds user
+       0.873908000 seconds sys
+
+
+
+ Performance counter stats for './build/src/bucketsort/bucketsort_mpi 100000000 2500000':
+
+    63,478,368,604      cpu-cycles:u                                                
+        57,922,394      cache-misses:u                                              
+            39,159      page-faults:u                                               
+
+      23.207629928 seconds time elapsed
+
+      22.196676000 seconds user
+       0.930847000 seconds sys
+
+
+
+ Performance counter stats for './build/src/bucketsort/bucketsort_mpi 100000000 2500000':
+
+    63,504,352,335      cpu-cycles:u                                                
+        59,245,763      cache-misses:u                                              
+            39,559      page-faults:u                                               
+
+      23.197583005 seconds time elapsed
+
+      22.211455000 seconds user
+       0.915833000 seconds sys
+
+
+
+ Performance counter stats for './build/src/bucketsort/bucketsort_mpi 100000000 2500000':
+
+    63,463,162,642      cpu-cycles:u                                                
+        56,764,718      cache-misses:u                                              
+            38,632      page-faults:u                                               
+
+      23.198871277 seconds time elapsed
+
+      22.297925000 seconds user
+       0.829063000 seconds sys
+
+
+
+ Performance counter stats for './build/src/bucketsort/bucketsort_mpi 100000000 2500000':
+
+    63,508,421,832      cpu-cycles:u                                                
+        57,179,368      cache-misses:u                                              
+            39,171      page-faults:u                                               
+
+      23.734725246 seconds time elapsed
+
+      22.228023000 seconds user
+       0.899895000 seconds sys
+
+
+
+ Performance counter stats for './build/src/bucketsort/bucketsort_mpi 100000000 2500000':
+
+    65,592,000,153      cpu-cycles:u                                                
+       128,214,034      cache-misses:u                                              
+            42,377      page-faults:u                                               
+
+      23.743886307 seconds time elapsed
+
+      22.742799000 seconds user
+       0.398086000 seconds sys
+
+
+--------------------------------------
+Running with 16 cores
+
+ Performance counter stats for './build/src/bucketsort/bucketsort_mpi 100000000 2500000':
+
+    64,039,919,971      cpu-cycles:u                                                
+       117,574,766      cache-misses:u                                              
+            25,420      page-faults:u                                               
+
+      23.124721113 seconds time elapsed
+
+      22.204100000 seconds user
+       0.414032000 seconds sys
+
+
+
+ Performance counter stats for './build/src/bucketsort/bucketsort_mpi 100000000 2500000':
+
+    61,797,779,288      cpu-cycles:u                                                
+        44,106,643      cache-misses:u                                              
+            22,008      page-faults:u                                               
+
+      23.207814399 seconds time elapsed
+
+      21.746546000 seconds user
+       0.865951000 seconds sys
+
+
+
+ Performance counter stats for './build/src/bucketsort/bucketsort_mpi 100000000 2500000':
+
+    61,970,311,992      cpu-cycles:u                                                
+        43,681,717      cache-misses:u                                              
+            22,413      page-faults:u                                               
+
+      23.113446441 seconds time elapsed
+
+      21.750500000 seconds user
+       0.860961000 seconds sys
+
+
+
+ Performance counter stats for './build/src/bucketsort/bucketsort_mpi 100000000 2500000':
+
+    62,042,804,074      cpu-cycles:u                                                
+        44,707,191      cache-misses:u                                              
+            22,137      page-faults:u                                               
+
+      23.138399929 seconds time elapsed
+
+      21.797335000 seconds user
+       0.815030000 seconds sys
+
+
+
+ Performance counter stats for './build/src/bucketsort/bucketsort_mpi 100000000 2500000':
+
+
+ Performance counter stats for './build/src/bucketsort/bucketsort_mpi 100000000 2500000':
+
+
+ Performance counter stats for './build/src/bucketsort/bucketsort_mpi 100000000 2500000':
+
+
+ Performance counter stats for './build/src/bucketsort/bucketsort_mpi 100000000 2500000':
+
+    62,013,238,312      cpu-cycles:u                                                
+        43,906,419      cache-misses:u                                              
+            22,008      page-faults:u                                               
+
+      23.099440041 seconds time elapsed
+
+      21.749067000 seconds user
+       0.862939000 seconds sys
+    61,974,244,896      cpu-cycles:u                                                
+        42,974,282      cache-misses:u                                              
+            22,517      page-faults:u                                               
+
+      23.095424885 seconds time elapsed
+
+      21.711328000 seconds user
+       0.901936000 seconds sys
+
+
+    62,185,429,287      cpu-cycles:u                                                
+        43,790,628      cache-misses:u                                              
+            21,960      page-faults:u                                               
+
+      23.177542156 seconds time elapsed
+
+      21.834681000 seconds user
+       0.779112000 seconds sys
+
+
+    61,586,771,738      cpu-cycles:u                                                
+        44,171,266      cache-misses:u                                              
+            22,105      page-faults:u                                               
+
+      23.111779870 seconds time elapsed
+
+      21.616430000 seconds user
+       0.990095000 seconds sys
+
+
+
+
+
+ Performance counter stats for './build/src/bucketsort/bucketsort_mpi 100000000 2500000':
+
+    61,905,639,772      cpu-cycles:u                                                
+        43,832,341      cache-misses:u                                              
+            21,989      page-faults:u                                               
+
+      22.683221269 seconds time elapsed
+
+      21.693779000 seconds user
+       0.920452000 seconds sys
+
+
+
+ Performance counter stats for './build/src/bucketsort/bucketsort_mpi 100000000 2500000':
+
+    62,071,350,963      cpu-cycles:u                                                
+        44,811,871      cache-misses:u                                              
+            21,951      page-faults:u                                               
+
+      22.695546203 seconds time elapsed
+
+      21.758462000 seconds user
+       0.856430000 seconds sys
+
+
+
+ Performance counter stats for './build/src/bucketsort/bucketsort_mpi 100000000 2500000':
+
+    62,037,265,650      cpu-cycles:u                                                
+        44,413,727      cache-misses:u                                              
+            22,423      page-faults:u                                               
+
+      22.696791017 seconds time elapsed
+
+      21.776980000 seconds user
+       0.837856000 seconds sys
+
+
+
+ Performance counter stats for './build/src/bucketsort/bucketsort_mpi 100000000 2500000':
+
+    61,989,691,934      cpu-cycles:u                                                
+        44,957,563      cache-misses:u                                              
+            22,796      page-faults:u                                               
+
+      22.689204579 seconds time elapsed
+
+      21.638839000 seconds user
+       0.976645000 seconds sys
+
+
+
+ Performance counter stats for './build/src/bucketsort/bucketsort_mpi 100000000 2500000':
+
+
+ Performance counter stats for './build/src/bucketsort/bucketsort_mpi 100000000 2500000':
+
+    61,935,946,954      cpu-cycles:u                                                
+        44,441,023      cache-misses:u                                              
+            22,074      page-faults:u                                               
+
+      22.690645924 seconds time elapsed
+
+      21.683351000 seconds user
+       0.932778000 seconds sys
+
+
+    62,094,549,159      cpu-cycles:u                                                
+        45,599,844      cache-misses:u                                              
+            22,348      page-faults:u                                               
+
+      22.686534111 seconds time elapsed
+
+      21.765363000 seconds user
+       0.849612000 seconds sys
+
+
+
+ Performance counter stats for './build/src/bucketsort/bucketsort_mpi 100000000 2500000':
+
+    62,023,737,825      cpu-cycles:u                                                
+        44,437,062      cache-misses:u                                              
+            22,115      page-faults:u                                               
+
+      22.687178834 seconds time elapsed
+
+      21.786850000 seconds user
+       0.828862000 seconds sys
+
+
+
+ Performance counter stats for './build/src/bucketsort/bucketsort_mpi 100000000 2500000':
+
+    62,113,525,789      cpu-cycles:u                                                
+        45,688,408      cache-misses:u                                              
+            22,093      page-faults:u                                               
+
+      22.708504508 seconds time elapsed
+
+      21.779964000 seconds user
+       0.835739000 seconds sys
+
+
+--------------------------------------
+Running with 32 cores
+
+ Performance counter stats for './build/src/bucketsort/bucketsort_mpi 100000000 2500000':
+
+    63,465,146,367      cpu-cycles:u                                                
+        33,444,524      cache-misses:u                                              
+           269,572      page-faults:u                                               
+
+      24.664305200 seconds time elapsed
+
+
+ Performance counter stats for './build/src/bucketsort/bucketsort_mpi 100000000 2500000':
+
+    63,375,087,603      cpu-cycles:u                                                
+        33,107,232      cache-misses:u                                              
+           269,956      page-faults:u                                               
+
+      24.528037739 seconds time elapsed
+
+      22.235816000 seconds user
+       1.630174000 seconds sys
+
+
+      22.209802000 seconds user
+       1.656107000 seconds sys
+
+
+
+ Performance counter stats for './build/src/bucketsort/bucketsort_mpi 100000000 2500000':
+
+    63,274,648,112      cpu-cycles:u                                                
+        32,762,278      cache-misses:u                                              
+           269,730      page-faults:u                                               
+
+      23.942631414 seconds time elapsed
+
+      22.224298000 seconds user
+       1.642032000 seconds sys
+
+
+
+ Performance counter stats for './build/src/bucketsort/bucketsort_mpi 100000000 2500000':
+
+    63,317,588,440      cpu-cycles:u                                                
+        33,153,878      cache-misses:u                                              
+           269,738      page-faults:u                                               
+
+      23.942638619 seconds time elapsed
+
+      22.128786000 seconds user
+       1.731991000 seconds sys
+
+
+
+ Performance counter stats for './build/src/bucketsort/bucketsort_mpi 100000000 2500000':
+
+    63,308,948,669      cpu-cycles:u                                                
+        33,043,171      cache-misses:u                                              
+           269,925      page-faults:u                                               
+
+      23.974213597 seconds time elapsed
+
+      22.260675000 seconds user
+       1.603159000 seconds sys
+
+
+
+ Performance counter stats for './build/src/bucketsort/bucketsort_mpi 100000000 2500000':
+
+    63,330,332,499      cpu-cycles:u                                                
+        33,045,924      cache-misses:u                                              
+           269,640      page-faults:u                                               
+
+      23.947978458 seconds time elapsed
+
+      22.217362000 seconds user
+       1.647171000 seconds sys
+
+
+
+ Performance counter stats for './build/src/bucketsort/bucketsort_mpi 100000000 2500000':
+
+    63,466,422,074      cpu-cycles:u                                                
+        33,340,776      cache-misses:u                                              
+           269,639      page-faults:u                                               
+
+      24.101947275 seconds time elapsed
+
+      22.212522000 seconds user
+       1.653168000 seconds sys
+
+
+
+ Performance counter stats for './build/src/bucketsort/bucketsort_mpi 100000000 2500000':
+
+    63,359,774,914      cpu-cycles:u                                                
+        32,909,756      cache-misses:u                                              
+           268,982      page-faults:u                                               
+
+      27.940524835 seconds time elapsed
+
+      22.216920000 seconds user
+       1.640155000 seconds sys
+
+
+
+ Performance counter stats for './build/src/bucketsort/bucketsort_mpi 100000000 2500000':
+
+    63,469,093,631      cpu-cycles:u                                                
+        33,264,056      cache-misses:u                                              
+           269,814      page-faults:u                                               
+
+      23.997709989 seconds time elapsed
+
+      22.284295000 seconds user
+       1.582399000 seconds sys
+
+
+
+ Performance counter stats for './build/src/bucketsort/bucketsort_mpi 100000000 2500000':
+
+    63,351,436,700      cpu-cycles:u                                                
+        32,433,638      cache-misses:u                                              
+           268,678      page-faults:u                                               
+
+      24.513629425 seconds time elapsed
+
+      22.196005000 seconds user
+       1.671010000 seconds sys
+
+
+
+ Performance counter stats for './build/src/bucketsort/bucketsort_mpi 100000000 2500000':
+
+    63,458,803,351      cpu-cycles:u                                                
+        33,287,106      cache-misses:u                                              
+           269,756      page-faults:u                                               
+
+      24.186038735 seconds time elapsed
+
+      22.241151000 seconds user
+       1.629202000 seconds sys
+
+
+
+ Performance counter stats for './build/src/bucketsort/bucketsort_mpi 100000000 2500000':
+
+    63,355,759,839      cpu-cycles:u                                                
+        33,197,010      cache-misses:u                                              
+           269,907      page-faults:u                                               
+
+      23.951138872 seconds time elapsed
+
+      22.275845000 seconds user
+       1.588281000 seconds sys
+
+
+
+ Performance counter stats for './build/src/bucketsort/bucketsort_mpi 100000000 2500000':
+
+    63,401,502,627      cpu-cycles:u                                                
+        33,304,606      cache-misses:u                                              
+           269,066      page-faults:u                                               
+
+      24.452061683 seconds time elapsed
+
+      22.232441000 seconds user
+       1.630073000 seconds sys
+
+
+
+ Performance counter stats for './build/src/bucketsort/bucketsort_mpi 100000000 2500000':
+
+    63,346,967,147      cpu-cycles:u                                                
+        33,088,479      cache-misses:u                                              
+           269,649      page-faults:u                                               
+
+      23.956625360 seconds time elapsed
+
+      22.235677000 seconds user
+       1.632232000 seconds sys
+
+
+
+ Performance counter stats for './build/src/bucketsort/bucketsort_mpi 100000000 2500000':
+
+    63,269,417,680      cpu-cycles:u                                                
+        32,404,466      cache-misses:u                                              
+           269,474      page-faults:u                                               
+
+      23.966694865 seconds time elapsed
+
+      22.228402000 seconds user
+       1.640045000 seconds sys
+
+
+
+ Performance counter stats for './build/src/bucketsort/bucketsort_mpi 100000000 2500000':
+
+    63,439,116,683      cpu-cycles:u                                                
+        33,324,497      cache-misses:u                                              
+           269,617      page-faults:u                                               
+
+      24.457992133 seconds time elapsed
+
+      22.185725000 seconds user
+       1.678817000 seconds sys
+
+
+
+ Performance counter stats for './build/src/bucketsort/bucketsort_mpi 100000000 2500000':
+
+    63,426,444,925      cpu-cycles:u                                                
+        33,314,459      cache-misses:u                                              
+           269,767      page-faults:u                                               
+
+      24.104956635 seconds time elapsed
+
+      22.215304000 seconds user
+       1.633052000 seconds sys
+
+
+
+ Performance counter stats for './build/src/bucketsort/bucketsort_mpi 100000000 2500000':
+
+
+ Performance counter stats for './build/src/bucketsort/bucketsort_mpi 100000000 2500000':
+
+    63,096,763,109      cpu-cycles:u                                                
+    63,331,471,840      cpu-cycles:u                                                
+        33,156,414      cache-misses:u                                              
+           270,293      page-faults:u                                               
+
+      23.947870284 seconds time elapsed
+
+      22.221587000 seconds user
+       1.629230000 seconds sys
+
+
+        32,686,287      cache-misses:u                                              
+           270,298      page-faults:u                                               
+
+      24.012829345 seconds time elapsed
+
+      22.139521000 seconds user
+       1.726828000 seconds sys
+
+
+
+ Performance counter stats for './build/src/bucketsort/bucketsort_mpi 100000000 2500000':
+
+    63,377,932,660      cpu-cycles:u                                                
+        33,350,940      cache-misses:u                                              
+           269,881      page-faults:u                                               
+
+      29.519672635 seconds time elapsed
+
+      22.263876000 seconds user
+       1.611155000 seconds sys
+
+
+
+ Performance counter stats for './build/src/bucketsort/bucketsort_mpi 100000000 2500000':
+
+    63,227,137,560      cpu-cycles:u                                                
+        32,864,962      cache-misses:u                                              
+           269,666      page-faults:u                                               
+
+      23.965216322 seconds time elapsed
+
+      22.166725000 seconds user
+       1.702830000 seconds sys
+
+
+
+ Performance counter stats for './build/src/bucketsort/bucketsort_mpi 100000000 2500000':
+
+    64,204,328,277      cpu-cycles:u                                                
+
+ Performance counter stats for './build/src/bucketsort/bucketsort_mpi 100000000 2500000':
+
+    63,239,338,109      cpu-cycles:u                                                
+        33,094,234      cache-misses:u                                              
+           269,587      page-faults:u                                               
+
+      23.967498591 seconds time elapsed
+
+      22.169957000 seconds user
+       111,698,156      cache-misses:u                                              
+           662,510      page-faults:u                                               
+
+      23.958497204 seconds time elapsed
+
+      22.294551000 seconds user
+       1.558055000 seconds sys
+
+
+       1.699932000 seconds sys
+
+
+
+ Performance counter stats for './build/src/bucketsort/bucketsort_mpi 100000000 2500000':
+
+    63,260,899,783      cpu-cycles:u                                                
+        32,756,076      cache-misses:u                                              
+           269,997      page-faults:u                                               
+
+      23.987204903 seconds time elapsed
+
+      22.254238000 seconds user
+       1.617543000 seconds sys
+
+
+
+ Performance counter stats for './build/src/bucketsort/bucketsort_mpi 100000000 2500000':
+
+    63,381,736,535      cpu-cycles:u                                                
+        33,418,973      cache-misses:u                                              
+           269,900      page-faults:u                                               
+
+      25.134677720 seconds time elapsed
+
+      22.222784000 seconds user
+       1.653041000 seconds sys
+
+
+
+ Performance counter stats for './build/src/bucketsort/bucketsort_mpi 100000000 2500000':
+
+    63,330,708,963      cpu-cycles:u                                                
+        33,091,451      cache-misses:u                                              
+           269,065      page-faults:u                                               
+
+      24.815097953 seconds time elapsed
+
+      22.169112000 seconds user
+       1.694035000 seconds sys
+
+
+
+ Performance counter stats for './build/src/bucketsort/bucketsort_mpi 100000000 2500000':
+
+
+ Performance counter stats for './build/src/bucketsort/bucketsort_mpi 100000000 2500000':
+
+    63,251,803,070      cpu-cycles:u                                                
+        32,971,471      cache-misses:u                                              
+    63,315,986,960      cpu-cycles:u                                                
+        32,824,988      cache-misses:u                                              
+           269,348      page-faults:u                                               
+
+      26.356238069 seconds time elapsed
+
+      22.219825000 seconds user
+       1.649754000 seconds sys
+
+
+
+ Performance counter stats for './build/src/bucketsort/bucketsort_mpi 100000000 2500000':
+
+    63,388,874,763      cpu-cycles:u                                                
+        33,196,146      cache-misses:u                                              
+           269,662      page-faults:u                                               
+
+      25.200779919 seconds time elapsed
+
+           269,714      page-faults:u                                               
+
+      23.955890417 seconds time elapsed
+
+      22.177745000 seconds user
+       1.698075000 seconds sys
+
+
+
+ Performance counter stats for './build/src/bucketsort/bucketsort_mpi 100000000 2500000':
+
+    63,407,143,293      cpu-cycles:u                                                
+        33,361,360      cache-misses:u                                              
+           269,901      page-faults:u                                               
+
+      24.552442642 seconds time elapsed
+
+      22.234598000 seconds user
+       1.641279000 seconds sys
+
+
+      22.182715000 seconds user
+       1.685205000 seconds sys
+
+
+
+ Performance counter stats for './build/src/bucketsort/bucketsort_mpi 100000000 2500000':
+
+    63,313,018,576      cpu-cycles:u                                                
+        33,037,674      cache-misses:u                                              
+           269,645      page-faults:u                                               
+
+      23.964853201 seconds time elapsed
+
+      22.254445000 seconds user
+       1.612488000 seconds sys
+
+
+
+ Performance counter stats for './build/src/bucketsort/bucketsort_mpi 100000000 2500000':
+
+    63,256,215,961      cpu-cycles:u                                                
+        33,162,322      cache-misses:u                                              
+           269,813      page-faults:u                                               
+
+      23.952959137 seconds time elapsed
+
+      22.178244000 seconds user
+       1.695044000 seconds sys
+
+
+[odd-even-sort_mpi]
+Running with 1 cores
+
+ Performance counter stats for './build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+   111,122,877,974      cpu-cycles:u                                                
+            29,333      cache-misses:u                                              
+             2,857      page-faults:u                                               
+
+      38.525702728 seconds time elapsed
+
+      38.412651000 seconds user
+       0.005985000 seconds sys
+
+
+--------------------------------------
+Running with 2 cores
+
+ Performance counter stats for './build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+    81,747,389,332      cpu-cycles:u                                                
+            67,549      cache-misses:u                                              
+             3,458      page-faults:u                                               
+
+      28.354208842 seconds time elapsed
+
+      28.272437000 seconds user
+       0.008978000 seconds sys
+
+
+
+ Performance counter stats for './build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+    79,830,509,235      cpu-cycles:u                                                
+            16,305      cache-misses:u                                              
+             2,961      page-faults:u                                               
+
+      28.354223439 seconds time elapsed
+
+      27.809275000 seconds user
+       0.461924000 seconds sys
+
+
+--------------------------------------
+Running with 4 cores
+
+ Performance counter stats for './build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+    50,917,647,622      cpu-cycles:u                                                
+            55,691      cache-misses:u                                              
+             2,398      page-faults:u                                               
+
+      18.365089312 seconds time elapsed
+
+      17.729362000 seconds user
+       0.239437000 seconds sys
+
+
+
+ Performance counter stats for './build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+    50,893,915,803      cpu-cycles:u                                                
+            33,072      cache-misses:u                                              
+             2,895      page-faults:u                                               
+
+      18.026928394 seconds time elapsed
+
+      17.739111000 seconds user
+
+ Performance counter stats for './build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+    50,893,254,218      cpu-cycles:u                                                
+       0.229458000 seconds sys
+
+
+            48,189      cache-misses:u                                              
+             2,689      page-faults:u                                               
+
+      18.345595689 seconds time elapsed
+
+      17.713131000 seconds user
+       0.265402000 seconds sys
+
+
+
+ Performance counter stats for './build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+    49,947,715,409      cpu-cycles:u                                                
+            33,400      cache-misses:u                                              
+             2,696      page-faults:u                                               
+
+      18.027675959 seconds time elapsed
+
+      17.466362000 seconds user
+       0.502830000 seconds sys
+
+
+--------------------------------------
+Running with 8 cores
+
+ Performance counter stats for './build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+    30,321,266,724      cpu-cycles:u                                                
+           153,137      cache-misses:u                                              
+             2,115      page-faults:u                                               
+
+      10.842813834 seconds time elapsed
+
+
+ Performance counter stats for './build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+
+ Performance counter stats for './build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+    29,895,573,942      cpu-cycles:u                                                
+      10.596295000 seconds user
+       0.203506000 seconds sys
+
+
+    30,392,366,949      cpu-cycles:u                                                
+            42,601      cache-misses:u                                              
+             2,160      page-faults:u                                               
+
+      10.848703722 seconds time elapsed
+
+      10.632657000 seconds user
+       0.167616000 seconds sys
+
+
+            23,672      cache-misses:u                                              
+             2,041      page-faults:u                                               
+
+      10.847438380 seconds time elapsed
+
+      10.468269000 seconds user
+       0.331217000 seconds sys
+
+
+
+ Performance counter stats for './build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+
+ Performance counter stats for './build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+    30,359,918,683      cpu-cycles:u                                                
+            32,427      cache-misses:u                                              
+
+ Performance counter stats for './build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+    30,354,343,089      cpu-cycles:u                                                
+            30,357      cache-misses:u                                              
+             2,674      page-faults:u                                               
+
+      11.319491821 seconds time elapsed
+
+      10.583167000 seconds user
+       0.216492000 seconds sys
+
+
+
+ Performance counter stats for './build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+    30,342,874,408      cpu-cycles:u                                                
+            28,966      cache-misses:u                                              
+             2,681      page-faults:u                                               
+
+      11.305536426 seconds time elapsed
+
+      10.613303000 seconds user
+       0.185568000 seconds sys
+
+
+    30,414,673,815      cpu-cycles:u                                                
+            43,329      cache-misses:u                                              
+             2,662      page-faults:u                                               
+
+      10.840163233 seconds time elapsed
+
+      10.608838000 seconds user
+       0.190548000 seconds sys
+
+
+             2,681      page-faults:u                                               
+
+      11.326206078 seconds time elapsed
+
+      10.580276000 seconds user
+       0.217450000 seconds sys
+
+
+
+ Performance counter stats for './build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+    30,331,949,328      cpu-cycles:u                                                
+            62,617      cache-misses:u                                              
+             3,137      page-faults:u                                               
+
+      11.333103814 seconds time elapsed
+
+      10.561637000 seconds user
+       0.248426000 seconds sys
+
+
+--------------------------------------
+Running with 16 cores
+
+ Performance counter stats for './build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+    16,516,916,565      cpu-cycles:u                                                
+            29,476      cache-misses:u                                              
+             2,501      page-faults:u                                               
+
+       6.405322552 seconds time elapsed
+
+       5.767067000 seconds user
+       0.134697000 seconds sys
+
+
+
+
+ Performance counter stats for './build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+    16,490,059,452      cpu-cycles:u                                                
+            30,290      cache-misses:u                                              
+             2,491      page-faults:u                                               
+
+       6.440718078 seconds time elapsed
+
+
+ Performance counter stats for './build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+    16,487,928,641      cpu-cycles:u                                                
+            44,503      cache-misses:u                                              
+             2,500      page-faults:u                                               
+
+       6.461629076 seconds time elapsed
+
+       5.753400000 seconds user
+       0.149620000 seconds sys
+
+
+
+ Performance counter stats for './build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+    16,519,452,513      cpu-cycles:u                                                
+            28,040      cache-misses:u                                              
+             2,496      page-faults:u                                               
+
+       6.409381071 seconds time elapsed
+
+       5.783605000 seconds user
+       0.117747000 seconds sys
+
+
+
+ Performance counter stats for './build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+    16,517,810,669      cpu-cycles:u                                                
+            35,043      cache-misses:u                                              
+             2,502      page-faults:u                                               
+
+       6.370049518 seconds time elapsed
+
+       5.803429000 seconds user
+       0.098769000 seconds sys
+
+
+
+ Performance counter stats for './build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+    16,467,202,296      cpu-cycles:u                                                
+            36,327      cache-misses:u                                              
+             2,497      page-faults:u                                               
+
+       6.367245342 seconds time elapsed
+
+       5.759078000 seconds user
+       0.142679000 seconds sys
+
+
+
+ Performance counter stats for './build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+    16,526,869,415      cpu-cycles:u                                                
+            36,414      cache-misses:u                                              
+             2,474      page-faults:u                                               
+
+       5.935932876 seconds time elapsed
+
+       5.797030000 seconds user
+       0.105745000 seconds sys
+
+
+ Performance counter stats for './build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+    16,515,495,538      cpu-cycles:u                                                
+            47,960      cache-misses:u                                              
+             2,499      page-faults:u                                               
+
+       6.460577486 seconds time elapsed
+
+       5.774842000 seconds user
+       0.127686000 seconds sys
+
+
+
+ Performance counter stats for './build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+    16,537,416,649      cpu-cycles:u                                                
+            34,990      cache-misses:u                                              
+             2,480      page-faults:u                                               
+
+       5.935905181 seconds time elapsed
+
+       5.779038000 seconds user
+       0.123679000 seconds sys
+
+
+       5.773326000 seconds user
+       0.128695000 seconds sys
+
+
+
+ Performance counter stats for './build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+    16,511,488,036      cpu-cycles:u                                                
+            43,363      cache-misses:u                                              
+             1,976      page-faults:u                                               
+
+       5.976413838 seconds time elapsed
+
+       5.768200000 seconds user
+       0.134724000 seconds sys
+
+
+
+ Performance counter stats for './build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+
+ Performance counter stats for './build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+    16,533,650,432      cpu-cycles:u                                                
+            33,803      cache-misses:u                                              
+             2,491      page-faults:u                                               
+
+       5.932522567 seconds time elapsed
+
+       5.778452000 seconds user
+       0.123752000 seconds sys
+
+
+    16,496,226,460      cpu-cycles:u                                                
+            26,286      cache-misses:u                                              
+             2,487      page-faults:u                                               
+
+       5.939817478 seconds time elapsed
+
+       5.767022000 seconds user
+       0.135741000 seconds sys
+
+
+
+ Performance counter stats for './build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+    16,533,660,691      cpu-cycles:u                                                
+            34,368      cache-misses:u                                              
+             2,496      page-faults:u                                               
+
+       5.959198919 seconds time elapsed
+
+       5.799420000 seconds user
+       0.102759000 seconds sys
+
+
+
+ Performance counter stats for './build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+    16,542,323,581      cpu-cycles:u                                                
+            37,391      cache-misses:u                                              
+             2,497      page-faults:u                                               
+
+       5.936350152 seconds time elapsed
+
+       5.769962000 seconds user
+       0.132677000 seconds sys
+
+
+
+ Performance counter stats for './build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+    16,260,930,190      cpu-cycles:u                                                
+            29,759      cache-misses:u                                              
+             2,446      page-faults:u                                               
+
+       5.932679744 seconds time elapsed
+
+       5.705375000 seconds user
+       0.196565000 seconds sys
+
+
+
+ Performance counter stats for './build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+    16,470,495,861      cpu-cycles:u                                                
+            53,038      cache-misses:u                                              
+             2,728      page-faults:u                                               
+
+       6.429727675 seconds time elapsed
+
+       5.761588000 seconds user
+       0.152644000 seconds sys
+
+
+--------------------------------------
+Running with 32 cores
+
+ Performance counter stats for './build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+     8,664,275,363      cpu-cycles:u                                                
+
+ Performance counter stats for './build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+     8,663,132,390      cpu-cycles:u                                                
+            42,266      cache-misses:u                                              
+             1,887      page-faults:u                                               
+
+       3.138817669 seconds time elapsed
+
+       3.043115000 seconds user
+       0.070839000 seconds sys
+
+
+            34,738      cache-misses:u                                              
+             1,890      page-faults:u                                               
+
+       3.144832307 seconds time elapsed
+
+       3.043050000 seconds user
+       0.070838000 seconds sys
+
+
+
+ Performance counter stats for './build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+     8,670,773,736      cpu-cycles:u                                                
+            34,470      cache-misses:u                                              
+             2,402      page-faults:u                                               
+
+       3.147576118 seconds time elapsed
+
+       3.042000000 seconds user
+       0.071811000 seconds sys
+
+
+
+ Performance counter stats for './build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+     8,650,105,157      cpu-cycles:u                                                
+            60,313      cache-misses:u                                              
+             1,880      page-faults:u                                               
+
+       3.147975320 seconds time elapsed
+
+       3.043669000 seconds user
+       0.069877000 seconds sys
+
+
+
+ Performance counter stats for './build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+     8,660,588,572      cpu-cycles:u                                                
+
+ Performance counter stats for './build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+     8,640,560,766      cpu-cycles:u                                                
+            56,852      cache-misses:u                                              
+             1,888      page-faults:u                                               
+
+       3.144432520 seconds time elapsed
+
+       3.040745000 seconds user
+       0.072850000 seconds sys
+
+
+            27,734      cache-misses:u                                              
+             2,393      page-faults:u                                               
+
+       3.140179490 seconds time elapsed
+
+       3.029163000 seconds user
+       0.084780000 seconds sys
+
+
+
+ Performance counter stats for './build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+
+ Performance counter stats for './build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+     8,664,222,924      cpu-cycles:u                                                
+
+ Performance counter stats for './build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+     8,672,297,473      cpu-cycles:u                                                
+            30,652      cache-misses:u                                              
+             2,403      page-faults:u                                               
+
+       3.138778881 seconds time elapsed
+
+       3.032506000 seconds user
+       0.081824000 seconds sys
+
+
+     8,686,962,455      cpu-cycles:u                                                
+            43,207      cache-misses:u                                              
+             1,890      page-faults:u                                               
+
+       3.145523695 seconds time elapsed
+
+       3.040124000 seconds user
+       0.073808000 seconds sys
+
+
+            58,235      cache-misses:u                                              
+             1,893      page-faults:u                                               
+
+       3.153298150 seconds time elapsed
+
+       3.025666000 seconds user
+       0.088784000 seconds sys
+
+
+
+ Performance counter stats for './build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+     8,665,186,920      cpu-cycles:u                                                
+            33,846      cache-misses:u                                              
+             2,401      page-faults:u                                               
+
+       3.151999147 seconds time elapsed
+
+       3.025717000 seconds user
+       0.088786000 seconds sys
+
+
+
+ Performance counter stats for './build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+     8,686,006,492      cpu-cycles:u                                                
+            42,610      cache-misses:u                                              
+             2,399      page-faults:u                                               
+
+       3.143063518 seconds time elapsed
+
+
+ Performance counter stats for './build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+
+ Performance counter stats for './build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+     8,492,242,710      cpu-cycles:u                                                
+       3.044086000 seconds user
+       0.069841000 seconds sys
+
+
+
+ Performance counter stats for './build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+     8,651,397,582      cpu-cycles:u                                                
+            34,606      cache-misses:u                                              
+             2,398      page-faults:u                                               
+
+       3.147697798 seconds time elapsed
+
+       3.043977000 seconds user
+       0.069815000 seconds sys
+
+
+
+ Performance counter stats for './build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+     8,656,550,008      cpu-cycles:u                                                
+            14,697      cache-misses:u                                              
+             1,886      page-faults:u                                               
+
+       3.693717318 seconds time elapsed
+
+       3.045430000 seconds user
+       0.068828000 seconds sys
+
+
+     8,646,661,260      cpu-cycles:u                                                
+            13,110      cache-misses:u                                              
+             2,397      page-faults:u                                               
+
+       3.637027589 seconds time elapsed
+
+       3.025749000 seconds user
+       0.088787000 seconds sys
+
+
+
+ Performance counter stats for './build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+     8,635,167,221      cpu-cycles:u                                                
+            13,951      cache-misses:u                                              
+             2,392      page-faults:u                                               
+
+       3.578417558 seconds time elapsed
+
+       3.039950000 seconds user
+       0.073804000 seconds sys
+
+
+            16,924      cache-misses:u                                              
+             2,372      page-faults:u                                               
+
+       3.534177701 seconds time elapsed
+
+       3.004107000 seconds user
+       0.109711000 seconds sys
+
+
+
+ Performance counter stats for './build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+
+ Performance counter stats for './build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+     8,652,459,201      cpu-cycles:u                                                
+            43,686      cache-misses:u                                              
+             1,888      page-faults:u                                               
+
+       4.022935022 seconds time elapsed
+
+       3.044317000 seconds user
+       0.070844000 seconds sys
+
+
+     8,648,617,531      cpu-cycles:u                                                
+            39,837      cache-misses:u                                              
+             2,396      page-faults:u                                               
+
+       3.802852139 seconds time elapsed
+
+       3.052009000 seconds user
+       0.062876000 seconds sys
+
+
+
+ Performance counter stats for './build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+     8,656,797,039      cpu-cycles:u                                                
+
+ Performance counter stats for './build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+     8,656,022,248      cpu-cycles:u                                                
+            13,453      cache-misses:u                                              
+             2,393      page-faults:u                                               
+
+       5.161808080 seconds time elapsed
+
+       3.045697000 seconds user
+       0.068834000 seconds sys
+
+
+
+ Performance counter stats for './build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+     8,650,776,524      cpu-cycles:u                                                
+            15,282      cache-misses:u                                              
+             2,391      page-faults:u                                               
+
+       3.526129841 seconds time elapsed
+
+       3.046921000 seconds user
+       0.067864000 seconds sys
+
+
+
+ Performance counter stats for './build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+     8,653,398,498      cpu-cycles:u                                                
+            41,256      cache-misses:u                                              
+             2,405      page-faults:u                                               
+
+       3.928177774 seconds time elapsed
+
+       3.011843000 seconds user
+       0.103719000 seconds sys
+
+
+            40,832      cache-misses:u                                              
+             2,396      page-faults:u                                               
+
+       5.285939385 seconds time elapsed
+
+       3.037648000 seconds user
+       0.077837000 seconds sys
+
+
+
+ Performance counter stats for './build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+     8,614,988,389      cpu-cycles:u                                                
+            12,777      cache-misses:u                                              
+             2,395      page-faults:u                                               
+
+       3.546394874 seconds time elapsed
+
+       3.037060000 seconds user
+       0.077796000 seconds sys
+
+
+
+ Performance counter stats for './build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+     8,647,102,945      cpu-cycles:u                                                
+            44,696      cache-misses:u                                              
+             2,397      page-faults:u                                               
+
+       3.788520063 seconds time elapsed
+
+       3.039155000 seconds user
+       0.075754000 seconds sys
+
+
+
+ Performance counter stats for './build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+     8,649,302,144      cpu-cycles:u                                                
+            42,673      cache-misses:u                                              
+             2,400      page-faults:u                                               
+
+       3.838774040 seconds time elapsed
+
+       3.040418000 seconds user
+       0.074764000 seconds sys
+
+
+
+ Performance counter stats for './build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+     8,640,108,277      cpu-cycles:u                                                
+            39,357      cache-misses:u                                              
+             2,397      page-faults:u                                               
+
+       3.914394083 seconds time elapsed
+
+       3.025156000 seconds user
+       0.089767000 seconds sys
+
+
+
+ Performance counter stats for './build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+     8,626,399,609      cpu-cycles:u                                                
+            33,047      cache-misses:u                                              
+
+ Performance counter stats for './build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+     8,620,653,329      cpu-cycles:u                                                
+            29,848      cache-misses:u                                              
+             2,385      page-faults:u                                               
+
+       3.595473007 seconds time elapsed
+
+       3.022510000 seconds user
+       0.092800000 seconds sys
+
+
+             2,396      page-faults:u                                               
+
+       3.575729171 seconds time elapsed
+
+       3.044197000 seconds user
+       0.070795000 seconds sys
+
+
+
+ Performance counter stats for './build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+     8,615,888,842      cpu-cycles:u                                                
+            34,189      cache-misses:u                                              
+             2,383      page-faults:u                                               
+
+       3.506954956 seconds time elapsed
+
+       3.034036000 seconds user
+       0.080841000 seconds sys
+
+
+
+ Performance counter stats for './build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+     8,629,311,626      cpu-cycles:u                                                
+            31,468      cache-misses:u                                              
+             2,392      page-faults:u                                               
+
+       3.514785618 seconds time elapsed
+
+       3.036305000 seconds user
+       0.078800000 seconds sys
+
+
+
+ Performance counter stats for './build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+     8,640,178,735      cpu-cycles:u                                                
+            34,701      cache-misses:u                                              
+             2,396      page-faults:u                                               
+
+       3.751023766 seconds time elapsed
+
+       3.029768000 seconds user
+       0.084825000 seconds sys
+
+
+
+ Performance counter stats for './build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+     8,641,133,362      cpu-cycles:u                                                
+            53,226      cache-misses:u                                              
+             2,734      page-faults:u                                               
+
+       3.926117067 seconds time elapsed
+
+       3.057208000 seconds user
+       0.070888000 seconds sys
+
+
+--------------------------------------

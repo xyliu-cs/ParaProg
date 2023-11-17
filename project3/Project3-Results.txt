@@ -1,0 +1,116 @@
+Quick Sort Sequential (Optimized with -O2)
+Quick Sort Complete!
+Execution Time: 12779 milliseconds
+std::sort Time: 11847 milliseconds
+Pass the sorting result check!
+
+Quick Sort MPI (Optimized with -O2)
+Number of cores: 1
+Quick Sort Complete!
+Execution Time: 12762 milliseconds
+std::sort Time: 12113 milliseconds
+Pass the sorting result check!
+Number of cores: 2
+Quick Sort Complete!
+Execution Time: 12905 milliseconds
+std::sort Time: 16213 milliseconds
+Pass the sorting result check!
+Number of cores: 4
+Quick Sort Complete!
+Execution Time: 9372 milliseconds
+std::sort Time: 16253 milliseconds
+Pass the sorting result check!
+Number of cores: 8
+Quick Sort Complete!
+Execution Time: 7945 milliseconds
+std::sort Time: 16157 milliseconds
+Pass the sorting result check!
+Number of cores: 16
+Quick Sort Complete!
+Execution Time: 7986 milliseconds
+std::sort Time: 16265 milliseconds
+Pass the sorting result check!
+Number of cores: 32
+Quick Sort Complete!
+Execution Time: 8459 milliseconds
+std::sort Time: 16296 milliseconds
+Pass the sorting result check!
+
+
+Bucket Sort Sequential (Optimized with -O2)
+Bucket Sort Complete!
+Execution Time: 11213 milliseconds
+std::sort Time: 11810 milliseconds
+Pass the sorting result check!
+
+Bucket Sort MPI (Optimized with -O2)
+Number of cores: 1
+Bucket Sort Complete!
+Execution Time: 9670 milliseconds
+std::sort Time: 11826 milliseconds
+Pass the sorting result check!
+Number of cores: 2
+Bucket Sort Complete!
+Execution Time: 7519 milliseconds
+std::sort Time: 15126 milliseconds
+Pass the sorting result check!
+Number of cores: 4
+Bucket Sort Complete!
+Execution Time: 4919 milliseconds
+std::sort Time: 15084 milliseconds
+Pass the sorting result check!
+Number of cores: 8
+Bucket Sort Complete!
+Execution Time: 3597 milliseconds
+std::sort Time: 15098 milliseconds
+Pass the sorting result check!
+Number of cores: 16
+Bucket Sort Complete!
+Execution Time: 2940 milliseconds
+std::sort Time: 15149 milliseconds
+Pass the sorting result check!
+Number of cores: 32
+Bucket Sort Complete!
+Execution Time: 2717 milliseconds
+std::sort Time: 15217 milliseconds
+Pass the sorting result check!
+
+
+Odd-Even Sort Sequential (Optimized with -O2)
+Odd-Even Sort Complete!
+Execution Time: 41114 milliseconds
+std::sort Time: 16 milliseconds
+Pass the sorting result check!
+
+Odd-Even Sort MPI (Optimized with -O2)
+Number of cores: 1
+Odd-Even Sort Complete!
+Execution Time: 38535 milliseconds
+std::sort Time: 16 milliseconds
+Pass the sorting result check!
+Number of cores: 2
+Odd-Even Sort Complete!
+Execution Time: 28332 milliseconds
+std::sort Time: 20 milliseconds
+Pass the sorting result check!
+Number of cores: 4
+Odd-Even Sort Complete!
+Execution Time: 18010 milliseconds
+std::sort Time: 20 milliseconds
+Pass the sorting result check!
+Number of cores: 8
+Odd-Even Sort Complete!
+Execution Time: 10756 milliseconds
+std::sort Time: 20 milliseconds
+Pass the sorting result check!
+Number of cores: 16
+Odd-Even Sort Complete!
+Execution Time: 5856 milliseconds
+std::sort Time: 20 milliseconds
+Pass the sorting result check!
+Number of cores: 32
+Odd-Even Sort Complete!
+Execution Time: 3063 milliseconds
+std::sort Time: 20 milliseconds
+Pass the sorting result check!
+
